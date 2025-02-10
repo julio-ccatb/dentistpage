@@ -71,9 +71,9 @@ export function Header() {
           </ul>
         </nav>
         <div className="hidden md:block">
-          <Button className="bg-rose-600 text-sm text-white hover:bg-rose-700 lg:text-base">
-            <Calendar className="mr-2 h-4 w-4" />
+          <Button className="bg-rose-600 text-sm font-semibold text-white hover:bg-rose-700 lg:text-base">
             Agenda tu cita
+            <Calendar className="mr-2 h-4 w-4" />
           </Button>
         </div>
         <button className="md:hidden" onClick={toggleMenu}>
@@ -132,9 +132,9 @@ export function Header() {
                   </a>
                 </li>
                 <li>
-                  <Button className="w-full bg-rose-600 text-base text-white hover:bg-rose-700">
-                    <Calendar className="mr-2 h-4 w-4" />
+                  <Button className="w-full bg-rose-600 text-base font-semibold text-white hover:bg-rose-700">
                     Agenda tu cita
+                    <Calendar className="mr-2 h-4 w-4" />
                   </Button>
                 </li>
               </ul>

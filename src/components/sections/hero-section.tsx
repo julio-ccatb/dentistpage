@@ -8,7 +8,7 @@ import Image from "next/image";
 export function HeroSection() {
   return (
     <section className="relative min-h-screen overflow-hidden pb-16 pt-24 sm:pb-20 sm:pt-32">
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-rose-50 to-indigo-100"></div>
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-rose-50 to-indigo-50"></div>
       <div className="container relative z-10 mx-auto px-4">
         <div className="flex flex-col items-center justify-between gap-8 lg:flex-row lg:gap-12">
           <motion.div
@@ -29,10 +29,10 @@ export function HeroSection() {
             <div className="flex flex-col gap-4 sm:flex-row">
               <Button
                 size="lg"
-                className="w-full bg-rose-600 text-base text-white shadow-lg hover:bg-rose-700 sm:w-auto sm:text-lg"
+                className="w-full bg-rose-600 text-base font-semibold text-white shadow-lg hover:bg-rose-700 sm:w-auto sm:text-lg"
               >
-                <Calendar className="mr-2 h-5 w-5" />
                 Agenda tu cita
+                <Calendar className="h-5 w-5" />
               </Button>
               <Button
                 size="lg"
@@ -40,7 +40,7 @@ export function HeroSection() {
                 className="w-full border-rose-300 text-base text-rose-600 hover:bg-rose-50 hover:text-rose-900 sm:w-auto sm:text-lg"
               >
                 Conoce nuestros servicios
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="h-5 w-5" />
               </Button>
             </div>
           </motion.div>
