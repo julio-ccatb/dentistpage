@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client";
 
 import { Star } from "lucide-react";
@@ -28,8 +29,8 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <AnimatedSection id="testimonios" className="bg-white py-16 sm:py-20">
-      <div className="container mx-auto px-4">
+    <AnimatedSection className="bg-white py-16 sm:py-20">
+      <div id="testimonios" className="container mx-auto px-4">
         <h2 className="mb-8 text-center text-3xl font-light text-blue-900 sm:mb-12 sm:text-4xl">
           Lo que dicen nuestros pacientes
         </h2>

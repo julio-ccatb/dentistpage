@@ -60,8 +60,8 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <AnimatedSection id="servicios" className="relative py-16 sm:py-20">
-      <div className="container relative z-10 mx-auto px-4">
+    <AnimatedSection className="relative py-16 sm:py-20">
+      <div id="servicios" className="container relative z-10 mx-auto px-4">
         <h2 className="mb-4 text-center text-3xl font-light text-blue-900 sm:text-4xl">
           Nuestros Servicios
         </h2>

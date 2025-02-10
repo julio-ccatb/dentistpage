@@ -1,83 +1,108 @@
-"use client"
+"use client";
 
-import { Phone, MapPin, Clock } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { AnimatedSection } from "@/components/animated-section"
+import { Phone, MapPin, Clock } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { AnimatedSection } from "@/components/animated-section";
 
 export function ContactSection() {
   return (
-    <AnimatedSection id="contacto" className="py-16 sm:py-20 bg-[#EBF8FF]">
-      <div className="container mx-auto px-4">
-        <h2 className="text-2xl sm:text-3xl font-light mb-8 sm:mb-12 text-blue-900 text-center">Contacto</h2>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
+    <AnimatedSection className="bg-[#EBF8FF] py-16 sm:py-20">
+      <div id="contacto" className="container mx-auto px-4">
+        <h2 className="mb-8 text-center text-2xl font-light text-blue-900 sm:mb-12 sm:text-3xl">
+          Contacto
+        </h2>
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 sm:gap-12 md:grid-cols-2">
           <div className="space-y-6 sm:space-y-8">
             <form className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label
+                    htmlFor="name"
+                    className="mb-1 block text-sm font-medium text-gray-700"
+                  >
                     Nombre
                   </label>
                   <input
                     type="text"
                     id="name"
                     name="name"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-base"
+                    className="w-full rounded-md border border-gray-300 px-3 py-2 text-base shadow-sm focus:border-blue-500 focus:ring-blue-500"
                     required
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label
+                    htmlFor="email"
+                    className="mb-1 block text-sm font-medium text-gray-700"
+                  >
                     Email
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-base"
+                    className="w-full rounded-md border border-gray-300 px-3 py-2 text-base shadow-sm focus:border-blue-500 focus:ring-blue-500"
                     required
                   />
                 </div>
               </div>
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="phone"
+                  className="mb-1 block text-sm font-medium text-gray-700"
+                >
                   Teléfono
                 </label>
                 <input
                   type="tel"
                   id="phone"
                   name="phone"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-base"
+                  className="w-full rounded-md border border-gray-300 px-3 py-2 text-base shadow-sm focus:border-blue-500 focus:ring-blue-500"
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="message"
+                  className="mb-1 block text-sm font-medium text-gray-700"
+                >
                   Mensaje
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   rows={4}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-base"
+                  className="w-full rounded-md border border-gray-300 px-3 py-2 text-base shadow-sm focus:border-blue-500 focus:ring-blue-500"
                   required
                 ></textarea>
               </div>
-              <Button type="submit" className="w-full bg-blue-600 text-white hover:bg-blue-700 text-base sm:text-lg">
+              <Button
+                type="submit"
+                className="w-full bg-blue-600 text-base text-white hover:bg-blue-700 sm:text-lg"
+              >
                 Enviar mensaje
               </Button>
             </form>
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-blue-900">Información de contacto</h3>
+              <h3 className="text-xl font-semibold text-blue-900">
+                Información de contacto
+              </h3>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-blue-600" />
-                <span className="text-base sm:text-lg text-gray-700">+34 123 456 789</span>
+                <span className="text-base text-gray-700 sm:text-lg">
+                  +34 123 456 789
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-blue-600" />
-                <span className="text-base sm:text-lg text-gray-700">Calle Principal 123, Madrid</span>
+                <span className="text-base text-gray-700 sm:text-lg">
+                  Calle Principal 123, Madrid
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="h-5 w-5 text-blue-600" />
-                <span className="text-base sm:text-lg text-gray-700">Lun-Vie: 9:00-20:00</span>
+                <span className="text-base text-gray-700 sm:text-lg">
+                  Lun-Vie: 9:00-20:00
+                </span>
               </div>
             </div>
           </div>
@@ -93,20 +118,26 @@ export function ContactSection() {
                 className="rounded-lg shadow-lg"
               ></iframe>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-lg sm:text-xl font-semibold text-blue-900 mb-4">Horario de atención</h3>
+            <div className="rounded-lg bg-white p-6 shadow-md">
+              <h3 className="mb-4 text-lg font-semibold text-blue-900 sm:text-xl">
+                Horario de atención
+              </h3>
               <ul className="space-y-2">
                 <li className="flex justify-between text-base sm:text-lg">
                   <span className="text-gray-700">Lunes - Viernes</span>
-                  <span className="text-blue-700 font-medium">9:00 - 20:00</span>
+                  <span className="font-medium text-blue-700">
+                    9:00 - 20:00
+                  </span>
                 </li>
                 <li className="flex justify-between text-base sm:text-lg">
                   <span className="text-gray-700">Sábado</span>
-                  <span className="text-blue-700 font-medium">10:00 - 15:00</span>
+                  <span className="font-medium text-blue-700">
+                    10:00 - 15:00
+                  </span>
                 </li>
                 <li className="flex justify-between text-base sm:text-lg">
                   <span className="text-gray-700">Domingo</span>
-                  <span className="text-blue-700 font-medium">Cerrado</span>
+                  <span className="font-medium text-blue-700">Cerrado</span>
                 </li>
               </ul>
             </div>
@@ -114,6 +145,5 @@ export function ContactSection() {
         </div>
       </div>
     </AnimatedSection>
-  )
+  );
 }
-
