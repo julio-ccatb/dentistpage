@@ -5,6 +5,7 @@ import { Calendar, Menu, SmileIcon as Tooth, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import Image from "next/image";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,8 +23,14 @@ export function Header() {
           transition={{ duration: 0.5 }}
           className="flex items-center"
         >
-          <Tooth className="h-6 w-6 text-blue-600 sm:h-8 sm:w-8" />
-          <span className="ml-2 text-lg font-bold text-blue-900 sm:text-xl">
+          <Image
+            src={"/tooth-svgrepo-com.svg"}
+            alt="logo"
+            height={50}
+            width={50}
+            className="h-6 w-6 text-rose-600 sm:h-8 sm:w-8"
+          />
+          <span className="ml-2 text-lg font-bold text-rose-900 sm:text-xl">
             Dra. Ofara Pacheco
           </span>
         </motion.div>
@@ -32,7 +39,7 @@ export function Header() {
             <li>
               <a
                 href="#sobre-mi"
-                className="text-sm text-gray-600 transition-colors hover:text-blue-600 lg:text-base"
+                className="text-sm text-gray-600 transition-colors hover:text-rose-600 lg:text-base"
               >
                 Sobre mí
               </a>
@@ -40,7 +47,7 @@ export function Header() {
             <li>
               <a
                 href="#servicios"
-                className="text-sm text-gray-600 transition-colors hover:text-blue-600 lg:text-base"
+                className="text-sm text-gray-600 transition-colors hover:text-rose-600 lg:text-base"
               >
                 Servicios
               </a>
@@ -48,7 +55,7 @@ export function Header() {
             <li>
               <a
                 href="#testimonios"
-                className="text-sm text-gray-600 transition-colors hover:text-blue-600 lg:text-base"
+                className="text-sm text-gray-600 transition-colors hover:text-rose-600 lg:text-base"
               >
                 Testimonios
               </a>
@@ -56,7 +63,7 @@ export function Header() {
             <li>
               <a
                 href="#contacto"
-                className="text-sm text-gray-600 transition-colors hover:text-blue-600 lg:text-base"
+                className="text-sm text-gray-600 transition-colors hover:text-rose-600 lg:text-base"
               >
                 Contacto
               </a>
@@ -64,16 +71,16 @@ export function Header() {
           </ul>
         </nav>
         <div className="hidden md:block">
-          <Button className="bg-blue-600 text-sm text-white hover:bg-blue-700 lg:text-base">
+          <Button className="bg-rose-600 text-sm text-white hover:bg-rose-700 lg:text-base">
             <Calendar className="mr-2 h-4 w-4" />
             Agenda tu cita
           </Button>
         </div>
         <button className="md:hidden" onClick={toggleMenu}>
           {isMenuOpen ? (
-            <X className="h-6 w-6 text-blue-600" />
+            <X className="h-6 w-6 text-rose-600" />
           ) : (
-            <Menu className="h-6 w-6 text-blue-600" />
+            <Menu className="h-6 w-6 text-rose-600" />
           )}
         </button>
       </div>
@@ -91,7 +98,7 @@ export function Header() {
                 <li>
                   <a
                     href="#sobre-mi"
-                    className="block text-base text-gray-600 transition-colors hover:text-blue-600"
+                    className="block text-base text-gray-600 transition-colors hover:text-rose-600"
                     onClick={toggleMenu}
                   >
                     Sobre mí
@@ -100,7 +107,7 @@ export function Header() {
                 <li>
                   <a
                     href="#servicios"
-                    className="block text-base text-gray-600 transition-colors hover:text-blue-600"
+                    className="block text-base text-gray-600 transition-colors hover:text-rose-600"
                     onClick={toggleMenu}
                   >
                     Servicios
@@ -109,7 +116,7 @@ export function Header() {
                 <li>
                   <a
                     href="#testimonios"
-                    className="block text-base text-gray-600 transition-colors hover:text-blue-600"
+                    className="block text-base text-gray-600 transition-colors hover:text-rose-600"
                     onClick={toggleMenu}
                   >
                     Testimonios
@@ -118,14 +125,14 @@ export function Header() {
                 <li>
                   <a
                     href="#contacto"
-                    className="block text-base text-gray-600 transition-colors hover:text-blue-600"
+                    className="block text-base text-gray-600 transition-colors hover:text-rose-600"
                     onClick={toggleMenu}
                   >
                     Contacto
                   </a>
                 </li>
                 <li>
-                  <Button className="w-full bg-blue-600 text-base text-white hover:bg-blue-700">
+                  <Button className="w-full bg-rose-600 text-base text-white hover:bg-rose-700">
                     <Calendar className="mr-2 h-4 w-4" />
                     Agenda tu cita
                   </Button>

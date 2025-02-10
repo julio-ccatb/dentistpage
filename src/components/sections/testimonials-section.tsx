@@ -31,7 +31,7 @@ export function TestimonialsSection() {
   return (
     <AnimatedSection className="bg-white py-16 sm:py-20">
       <div id="testimonios" className="container mx-auto px-4">
-        <h2 className="mb-8 text-center text-3xl font-light text-blue-900 sm:mb-12 sm:text-4xl">
+        <h2 className="mb-8 text-center text-3xl font-light text-rose-900 sm:mb-12 sm:text-4xl">
           Lo que dicen nuestros pacientes
         </h2>
         <div className="mx-auto max-w-6xl">
@@ -39,7 +39,7 @@ export function TestimonialsSection() {
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
-                className="rounded-xl bg-blue-50 p-6 shadow-lg"
+                className="rounded-xl bg-rose-50 p-6 shadow-lg"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -53,7 +53,7 @@ export function TestimonialsSection() {
                     className="mr-4 h-12 w-12 rounded-full border-2 border-white shadow-md sm:h-14 sm:w-14"
                   />
                   <div>
-                    <h3 className="text-base font-semibold text-blue-900 sm:text-lg">
+                    <h3 className="text-base font-semibold text-rose-900 sm:text-lg">
                       {testimonial.name}
                     </h3>
                     <div className="flex text-yellow-400">

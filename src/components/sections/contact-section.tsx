@@ -6,9 +6,9 @@ import { AnimatedSection } from "@/components/animated-section";
 
 export function ContactSection() {
   return (
-    <AnimatedSection className="bg-[#EBF8FF] py-16 sm:py-20">
+    <AnimatedSection className="bg-gradient-to-br from-pink-50 to-indigo-100 py-16 sm:py-20">
       <div id="contacto" className="container mx-auto px-4">
-        <h2 className="mb-8 text-center text-2xl font-light text-blue-900 sm:mb-12 sm:text-3xl">
+        <h2 className="mb-8 text-center text-2xl font-light text-rose-900 sm:mb-12 sm:text-3xl">
           Contacto
         </h2>
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 sm:gap-12 md:grid-cols-2">
@@ -26,7 +26,7 @@ export function ContactSection() {
                     type="text"
                     id="name"
                     name="name"
-                    className="w-full rounded-md border border-gray-300 px-3 py-2 text-base shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                    className="w-full rounded-md border border-gray-300 px-3 py-2 text-base shadow-sm focus:border-rose-500 focus:ring-rose-500"
                     required
                   />
                 </div>
@@ -41,7 +41,7 @@ export function ContactSection() {
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full rounded-md border border-gray-300 px-3 py-2 text-base shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                    className="w-full rounded-md border border-gray-300 px-3 py-2 text-base shadow-sm focus:border-rose-500 focus:ring-rose-500"
                     required
                   />
                 </div>
@@ -57,7 +57,7 @@ export function ContactSection() {
                   type="tel"
                   id="phone"
                   name="phone"
-                  className="w-full rounded-md border border-gray-300 px-3 py-2 text-base shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  className="w-full rounded-md border border-gray-300 px-3 py-2 text-base shadow-sm focus:border-rose-500 focus:ring-rose-500"
                 />
               </div>
               <div>
@@ -71,35 +71,35 @@ export function ContactSection() {
                   id="message"
                   name="message"
                   rows={4}
-                  className="w-full rounded-md border border-gray-300 px-3 py-2 text-base shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  className="w-full rounded-md border border-gray-300 px-3 py-2 text-base shadow-sm focus:border-rose-500 focus:ring-rose-500"
                   required
                 ></textarea>
               </div>
               <Button
                 type="submit"
-                className="w-full bg-blue-600 text-base text-white hover:bg-blue-700 sm:text-lg"
+                className="w-full bg-rose-600 text-base text-white hover:bg-rose-700 sm:text-lg"
               >
                 Enviar mensaje
               </Button>
             </form>
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-blue-900">
+              <h3 className="text-xl font-semibold text-rose-900">
                 Información de contacto
               </h3>
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-blue-600" />
+                <Phone className="h-5 w-5 text-rose-600" />
                 <span className="text-base text-gray-700 sm:text-lg">
                   +34 123 456 789
                 </span>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-blue-600" />
+                <MapPin className="h-5 w-5 text-rose-600" />
                 <span className="text-base text-gray-700 sm:text-lg">
                   Calle Principal 123, Madrid
                 </span>
               </div>
               <div className="flex items-center space-x-3">
-                <Clock className="h-5 w-5 text-blue-600" />
+                <Clock className="h-5 w-5 text-rose-600" />
                 <span className="text-base text-gray-700 sm:text-lg">
                   Lun-Vie: 9:00-20:00
                 </span>
@@ -119,25 +119,25 @@ export function ContactSection() {
               ></iframe>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-md">
-              <h3 className="mb-4 text-lg font-semibold text-blue-900 sm:text-xl">
+              <h3 className="mb-4 text-lg font-semibold text-rose-900 sm:text-xl">
                 Horario de atención
               </h3>
               <ul className="space-y-2">
                 <li className="flex justify-between text-base sm:text-lg">
                   <span className="text-gray-700">Lunes - Viernes</span>
-                  <span className="font-medium text-blue-700">
+                  <span className="font-medium text-rose-700">
                     9:00 - 20:00
                   </span>
                 </li>
                 <li className="flex justify-between text-base sm:text-lg">
                   <span className="text-gray-700">Sábado</span>
-                  <span className="font-medium text-blue-700">
+                  <span className="font-medium text-rose-700">
                     10:00 - 15:00
                   </span>
                 </li>
                 <li className="flex justify-between text-base sm:text-lg">
                   <span className="text-gray-700">Domingo</span>
-                  <span className="font-medium text-blue-700">Cerrado</span>
+                  <span className="font-medium text-rose-700">Cerrado</span>
                 </li>
               </ul>
             </div>
