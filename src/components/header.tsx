@@ -1,6 +1,6 @@
 "use client";
 
-import { Calendar, Menu, SmileIcon as Tooth, X } from "lucide-react";
+import { Calendar, Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { AnimatePresence, motion } from "framer-motion";
