@@ -1,4 +1,3 @@
-import { api, HydrateClient } from "@/trpc/server";
 import { Header } from "@/components/header";
 import { HeroSection } from "@/components/sections/hero-section";
 import { ServicesSection } from "@/components/sections/services-section";
@@ -8,19 +7,15 @@ import { ContactSection } from "@/components/sections/contact-section";
 import { FooterSection } from "@/components/sections/footer-section";
 
 export default async function Home() {
-  void api.post.getLatest.prefetch();
-
   return (
-    <HydrateClient>
-      <div className="min-h-screen bg-white">
-        <Header />
-        <HeroSection />
-        <ServicesSection />
-        <AboutSection />
-        <TestimonialsSection />
-        <ContactSection />
-        <FooterSection />
-      </div>
-    </HydrateClient>
+    <div className="min-h-screen bg-white">
+      <Header />
+      <HeroSection />
+      <ServicesSection />
+      <AboutSection />
+      <TestimonialsSection />
+      <ContactSection />
+      <FooterSection />
+    </div>
   );
 }
