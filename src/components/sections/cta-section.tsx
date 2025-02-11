@@ -22,9 +22,12 @@ export function CtaSection() {
             saludable y radiante. Nuestro equipo de expertos está listo para
             brindarte la mejor atención dental personalizada.
           </p>
-          <Button size="lg" className="bg-white text-rose-600 hover:bg-rose-50">
-            <Calendar className="mr-2 h-5 w-5" />
+          <Button
+            size="lg"
+            className="bg-white text-lg font-semibold text-rose-600 hover:bg-rose-50"
+          >
             Agendar Cita
+            <Calendar className="h-5 w-5" />
           </Button>
         </motion.div>
       </div>

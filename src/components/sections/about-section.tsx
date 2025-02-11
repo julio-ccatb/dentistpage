@@ -4,6 +4,7 @@ import { Calendar, ArrowRight, SmileIcon as Tooth } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export function AboutSection() {
   return (
@@ -58,14 +59,16 @@ export function AboutSection() {
                 <Calendar className="mr-2 h-5 w-5" />
                 Agenda una consulta
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="w-full border-rose-300 text-base text-rose-600 hover:bg-rose-50 hover:text-rose-900 sm:w-auto sm:text-lg"
-              >
-                Conoce más sobre mí
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <Link href={"/about"}>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="w-full border-rose-300 text-base text-rose-600 hover:bg-rose-50 hover:text-rose-900 sm:w-auto sm:text-lg"
+                >
+                  Conoce más sobre mí
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>

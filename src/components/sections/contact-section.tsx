@@ -6,7 +6,7 @@ import { AnimatedSection } from "@/components/animated-section";
 
 export function ContactSection() {
   return (
-    <AnimatedSection className="bg-gradient-to-br from-pink-50 to-indigo-100 py-16 sm:py-20">
+    <AnimatedSection className="bg-rose-50 py-16 sm:py-20">
       <div id="contacto" className="container mx-auto px-4">
         <h2 className="mb-8 text-center text-2xl font-light text-rose-900 sm:mb-12 sm:text-3xl">
           Contacto

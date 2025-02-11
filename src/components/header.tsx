@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,52 +22,46 @@ export function Header() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="flex items-center"
         >
-          <Image
-            src={"/tooth-svgrepo-com.svg"}
-            alt="logo"
-            height={50}
-            width={50}
-            className="h-6 w-6 text-rose-600 sm:h-8 sm:w-8"
-          />
-          <span className="ml-2 text-lg font-bold text-rose-900 sm:text-xl">
-            Dra. Ofara Pacheco
-          </span>
+          <Link href={"/"} className="flex items-center">
+            <Image
+              src={"/tooth-svgrepo-com.svg"}
+              alt="logo"
+              height={50}
+              width={50}
+              className="h-6 w-6 text-rose-600 sm:h-8 sm:w-8"
+            />
+            <span className="ml-2 text-lg font-bold text-rose-900 sm:text-xl">
+              Dra. Ofara Pacheco
+            </span>
+          </Link>
         </motion.div>
         <nav className="hidden md:block">
           <ul className="flex space-x-6 lg:space-x-8">
             <li>
-              <a
-                href="#sobre-mi"
+              <Link
+                href="/about"
                 className="text-sm text-gray-600 transition-colors hover:text-rose-600 lg:text-base"
               >
                 Sobre mí
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#servicios"
+              <Link
+                href="/#servicios"
                 className="text-sm text-gray-600 transition-colors hover:text-rose-600 lg:text-base"
               >
                 Servicios
-              </a>
+              </Link>
             </li>
+
             <li>
-              <a
-                href="#testimonios"
-                className="text-sm text-gray-600 transition-colors hover:text-rose-600 lg:text-base"
-              >
-                Testimonios
-              </a>
-            </li>
-            <li>
-              <a
+              <Link
                 href="#contacto"
                 className="text-sm text-gray-600 transition-colors hover:text-rose-600 lg:text-base"
               >
                 Contacto
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -96,40 +91,32 @@ export function Header() {
             <nav className="container mx-auto px-4 py-4">
               <ul className="space-y-4">
                 <li>
-                  <a
-                    href="#sobre-mi"
+                  <Link
+                    href="/about"
                     className="block text-base text-gray-600 transition-colors hover:text-rose-600"
                     onClick={toggleMenu}
                   >
                     Sobre mí
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#servicios"
+                  <Link
+                    href="/#servicios"
                     className="block text-base text-gray-600 transition-colors hover:text-rose-600"
                     onClick={toggleMenu}
                   >
                     Servicios
-                  </a>
+                  </Link>
                 </li>
+
                 <li>
-                  <a
-                    href="#testimonios"
-                    className="block text-base text-gray-600 transition-colors hover:text-rose-600"
-                    onClick={toggleMenu}
-                  >
-                    Testimonios
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#contacto"
+                  <Link
+                    href="/#contacto"
                     className="block text-base text-gray-600 transition-colors hover:text-rose-600"
                     onClick={toggleMenu}
                   >
                     Contacto
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <Button className="w-full bg-rose-600 text-base font-semibold text-white hover:bg-rose-700">
