@@ -8,20 +8,20 @@ import { TestimonialsSection } from "@/components/sections/testimonials-section"
 import { type Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Dra. Ofara Pacheco | Implantóloga y Periodoncista en Madrid",
+  title: "Dra. Ofara Pacheco | Implantóloga y Periodoncista en Santo Domingo",
   description:
-    "Especialista en implantología avanzada y periodoncia. Transformamos sonrisas con tecnología de vanguardia y atención personalizada en Madrid.",
+    "Especialista en implantología avanzada y periodoncia. Transformamos sonrisas con tecnología de vanguardia y atención personalizada en Santo Domingo.",
   keywords:
-    "implantes dentales, periodoncia, implantología avanzada, dentista Madrid, Dra. Ofara Pacheco",
+    "implantes dentales, periodoncia, implantología avanzada, dentista Santo Domingo, Dra. Ofara Pacheco",
   openGraph: {
-    title: "Dra. Ofara Pacheco | Implantóloga y Periodoncista en Madrid",
+    title: "Dra. Ofara Pacheco | Implantóloga y Periodoncista en Santo Domingo",
     description:
       "Especialista en implantología avanzada y periodoncia. Transformamos sonrisas con tecnología de vanguardia y atención personalizada.",
     url: "https://www.drapacheco.com",
     siteName: "Clínica Dental Dra. Ofara Pacheco",
     images: [
       {
-        url: "https://www.drapacheco.com/og-image.jpg",
+        url: "https://www.drapacheco.com/dra2.jpg",
         width: 1200,
         height: 630,
         alt: "Dra. Ofara Pacheco en su clínica dental",
@@ -32,10 +32,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dra. Ofara Pacheco | Implantóloga y Periodoncista en Madrid",
+    title: "Dra. Ofara Pacheco | Implantóloga y Periodoncista en Santo Domingo",
     description:
       "Especialista en implantología avanzada y periodoncia. Transformamos sonrisas con tecnología de vanguardia y atención personalizada.",
-    images: ["https://www.drapacheco.com/twitter-image.jpg"],
+    images: ["https://www.drapacheco.com/dra.jpg"],
   },
 };
 
