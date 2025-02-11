@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client";
 
 import { useState } from "react";
@@ -77,19 +78,19 @@ export function Testimonials() {
             <div className="mb-6 flex items-center">
               <Image
                 src={
-                  testimonials[currentTestimonial].image || "/placeholder.svg"
+                  testimonials[currentTestimonial]!.image || "/placeholder.svg"
                 }
-                alt={testimonials[currentTestimonial].name}
+                alt={testimonials[currentTestimonial]!.name}
                 width={80}
                 height={80}
                 className="mr-4 rounded-full"
               />
               <div>
                 <h3 className="text-xl font-semibold text-rose-900">
-                  {testimonials[currentTestimonial].name}
+                  {testimonials[currentTestimonial]!.name}
                 </h3>
                 <div className="flex text-yellow-400">
-                  {[...Array(testimonials[currentTestimonial].rating)].map(
+                  {[...Array(testimonials[currentTestimonial]!.rating)].map(
                     (_, i) => (
                       <Star key={i} className="h-5 w-5 fill-current" />
                     ),
@@ -98,7 +99,7 @@ export function Testimonials() {
               </div>
             </div>
             <p className="mb-4 text-lg italic text-rose-800">
-              "{testimonials[currentTestimonial].text}"
+              &quot;{testimonials[currentTestimonial]!.text}&quot;
             </p>
           </motion.div>
           <div className="mt-8 flex justify-center space-x-4">

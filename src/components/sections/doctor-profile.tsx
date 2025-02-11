@@ -93,7 +93,9 @@ const profileData = [
 ];
 
 export function DoctorProfile() {
-  const [activeCategory, setActiveCategory] = useState(profileData[0].category);
+  const [activeCategory, setActiveCategory] = useState(
+    profileData[0]!.category,
+  );
 
   return (
     <section className="py-16 sm:py-20">
@@ -159,7 +161,7 @@ export function DoctorProfile() {
               una experiencia de tratamiento superior.
             </motion.p>
             <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-2">
-              {profileData.map((category, index) => (
+              {profileData.map((category) => (
                 <motion.button
                   key={category.category}
                   onClick={() => setActiveCategory(category.category)}

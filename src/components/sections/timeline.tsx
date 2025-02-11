@@ -75,7 +75,7 @@ function TimelineEvent({
 
   useEffect(() => {
     if (isInView) {
-      controls.start("visible");
+      void controls.start("visible");
     }
   }, [isInView, controls]);
 
