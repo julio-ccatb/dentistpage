@@ -48,7 +48,7 @@ export function Header() {
             </li>
             <li>
               <Link
-                href="/#servicios"
+                href="/services"
                 className="text-sm text-gray-600 transition-colors hover:text-rose-600 lg:text-base"
               >
                 Servicios
@@ -57,7 +57,7 @@ export function Header() {
 
             <li>
               <Link
-                href="#contacto"
+                href="/#contacto"
                 className="text-sm text-gray-600 transition-colors hover:text-rose-600 lg:text-base"
               >
                 Contacto
@@ -101,7 +101,7 @@ export function Header() {
                 </li>
                 <li>
                   <Link
-                    href="/#servicios"
+                    href="/services"
                     className="block text-base text-gray-600 transition-colors hover:text-rose-600"
                     onClick={toggleMenu}
                   >
