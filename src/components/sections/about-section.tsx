@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { globalVariable } from "@/globals/config";
 
 export function AboutSection() {
   return (
@@ -52,13 +53,15 @@ export function AboutSection() {
               cercano, asegurando bienestar y resultados duraderos.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Button
-                size="lg"
-                className="w-full bg-rose-600 text-base text-white shadow-lg hover:bg-rose-700 sm:w-auto sm:text-lg"
-              >
-                <Calendar className="mr-2 h-5 w-5" />
-                Agenda una consulta
-              </Button>
+              <Link target="_blank" href={globalVariable.whatsappLink}>
+                <Button
+                  size="lg"
+                  className="w-full bg-rose-600 text-base text-white shadow-lg hover:bg-rose-700 sm:w-auto sm:text-lg"
+                >
+                  <Calendar className="mr-2 h-5 w-5" />
+                  Agenda una consulta
+                </Button>
+              </Link>
               <Link href={"/about"}>
                 <Button
                   size="lg"

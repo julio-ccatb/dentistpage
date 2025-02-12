@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { globalVariable } from "@/globals/config";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -66,10 +67,12 @@ export function Header() {
           </ul>
         </nav>
         <div className="hidden md:block">
-          <Button className="bg-rose-600 text-sm font-semibold text-white hover:bg-rose-700 lg:text-base">
-            Agenda tu cita
-            <Calendar className="mr-2 h-4 w-4" />
-          </Button>
+          <Link target="_blank" href={globalVariable.whatsappLink}>
+            <Button className="bg-rose-600 text-sm font-semibold text-white hover:bg-rose-700 lg:text-base">
+              Agenda tu cita
+              <Calendar className="mr-2 h-4 w-4" />
+            </Button>
+          </Link>
         </div>
         <button className="md:hidden" onClick={toggleMenu}>
           {isMenuOpen ? (
@@ -119,10 +122,12 @@ export function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Button className="w-full bg-rose-600 text-base font-semibold text-white hover:bg-rose-700">
-                    Agenda tu cita
-                    <Calendar className="mr-2 h-4 w-4" />
-                  </Button>
+                  <Link target="_blank" href={globalVariable.whatsappLink}>
+                    <Button className="w-full bg-rose-600 text-base font-semibold text-white hover:bg-rose-700">
+                      Agenda tu cita
+                      <Calendar className="mr-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </li>
               </ul>
             </nav>

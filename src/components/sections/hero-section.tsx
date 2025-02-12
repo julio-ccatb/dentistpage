@@ -1,9 +1,11 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { globalVariable } from "@/globals/config";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, SmileIcon as Tooth } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export function HeroSection() {
   return (
@@ -27,13 +29,15 @@ export function HeroSection() {
               personalizado.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Button
-                size="lg"
-                className="w-full bg-rose-600 text-base font-semibold text-white shadow-lg hover:bg-rose-700 sm:w-auto sm:text-lg"
-              >
-                Agenda tu cita
-                <Calendar className="h-5 w-5" />
-              </Button>
+              <Link target="_blank" href={globalVariable.whatsappLink}>
+                <Button
+                  size="lg"
+                  className="w-full bg-rose-600 text-base font-semibold text-white shadow-lg hover:bg-rose-700 sm:w-auto sm:text-lg"
+                >
+                  Agenda tu cita
+                  <Calendar className="h-5 w-5" />
+                </Button>
+              </Link>
               <Button
                 size="lg"
                 variant="outline"
