@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { SmileIcon as Tooth, Bone, Smile, Microscope } from "lucide-react";
+import { SmileIcon as Tooth, Microscope, Shield } from "lucide-react";
 
 const treatmentGroups = [
   {
@@ -12,62 +12,22 @@ const treatmentGroups = [
     icon: Tooth,
     treatments: [
       {
-        id: "implantes-unitarios",
-        name: "Implantes Unitarios",
+        id: "implantes-dentales",
+        name: "Implantes Dentales",
         description:
-          "Restauración de dientes individuales con implantes de titanio biocompatibles para una sonrisa natural y funcional.",
+          "Restauración completa mediante implantes de titanio biocompatibles, ofreciendo una solución permanente y natural para dientes perdidos.",
         images: [
           {
-            src: "/placeholder.svg?height=400&width=600",
+            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZRPsZdMEAHJwfPNGXOtV06ovKB9Y1e74LmMCT",
             alt: "Implante dental individual",
           },
           {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Proceso de colocación de implante unitario",
+            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZ26aLbXuLx6PJWCqFOMbwAVDuHcS978GYERpn",
+            alt: "Proceso de colocación de implante",
           },
           {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Resultado final de implante unitario",
-          },
-        ],
-      },
-      {
-        id: "implantes-carga-inmediata",
-        name: "Implantes de Carga Inmediata",
-        description:
-          "Implantes y prótesis provisionales en el mismo día, para una recuperación estética inmediata.",
-        images: [
-          {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Proceso de carga inmediata",
-          },
-          {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Antes y después de carga inmediata",
-          },
-          {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Paciente con implantes de carga inmediata",
-          },
-        ],
-      },
-      {
-        id: "all-on-4",
-        name: "All-on-4",
-        description:
-          "Técnica revolucionaria para rehabilitar una arcada completa con solo cuatro implantes estratégicamente colocados.",
-        images: [
-          {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Proceso All-on-4",
-          },
-          {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Antes y después de All-on-4",
-          },
-          {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Radiografía de All-on-4",
+            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZMYjg8zPGjN0J6qnVOxA43FKwmt5fvcuoshXQ",
+            alt: "Resultado final de implantes",
           },
         ],
       },
@@ -79,136 +39,85 @@ const treatmentGroups = [
     icon: Microscope,
     treatments: [
       {
-        id: "tratamiento-periodontal",
-        name: "Tratamiento Periodontal",
+        id: "frenectomia",
+        name: "Frenectomía",
         description:
-          "Cuidado integral de las encías para prevenir y tratar enfermedades periodontales.",
+          "Procedimiento quirúrgico para corregir el frenillo labial o lingual, mejorando la función y estética bucal.",
         images: [
           {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Tratamiento periodontal en progreso",
+            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZ8wx0cUsGtLX3yWRPe2k7hmBgAwMF6r58U4Sq",
+            alt: "Procedimiento de frenectomía",
           },
           {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Antes y después de tratamiento periodontal",
+            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZcLh3gokPAREVgCtQlZsJbFWLOd80aSGTp6vc",
+            alt: "Antes y después de frenectomía",
           },
           {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Equipo utilizado en tratamientos periodontales",
+            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZrTbOy1I4a95z3DBkW1yVEZwJlAXgIoFxncfj",
+            alt: "Resultados de frenectomía",
           },
         ],
       },
       {
-        id: "cirugia-periodontal",
-        name: "Cirugía Periodontal",
+        id: "gingivectomia",
+        name: "Gingivectomía",
         description:
-          "Procedimientos quirúrgicos avanzados para tratar casos severos de enfermedad periodontal y mejorar la estética gingival.",
+          "Técnica quirúrgica para remodelar el contorno de las encías, eliminando el exceso de tejido gingival.",
         images: [
           {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Cirugía periodontal en progreso",
+            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZuwOJ1yKYyRhZH5uvOxt6NQ1Sa0ejCWAPwMp7",
+            alt: "Procedimiento de gingivectomía",
           },
           {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Antes y después de cirugía periodontal",
+            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZlXHBtJuCW7KiXoF0STwvz8AGeI519MJQrEdf",
+            alt: "Antes y después de gingivectomía",
           },
           {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Instrumentos de cirugía periodontal",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: "regeneracion",
-    name: "Regeneración Ósea",
-    icon: Bone,
-    treatments: [
-      {
-        id: "injerto-oseo",
-        name: "Injerto Óseo",
-        description:
-          "Técnicas avanzadas para recuperar el volumen óseo necesario para implantes exitosos.",
-        images: [
-          {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Proceso de injerto óseo",
-          },
-          {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Antes y después de injerto óseo",
-          },
-          {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Materiales utilizados en injertos óseos",
+            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZk4Y6j9Drn63yQHEetX5BwpaIVsWK9rvRgMSc",
+            alt: "Resultados de gingivectomía",
           },
         ],
       },
       {
-        id: "elevacion-seno-maxilar",
-        name: "Elevación de Seno Maxilar",
+        id: "peeling-gingival",
+        name: "Peeling Gingival",
         description:
-          "Procedimiento para aumentar el volumen óseo en el maxilar superior, permitiendo la colocación de implantes en áreas con poco hueso.",
+          "Tratamiento para mejorar la salud y apariencia de las encías, eliminando tejido dañado y promoviendo la regeneración.",
         images: [
           {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Proceso de elevación de seno maxilar",
+            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZj9XQtEWHKlDdosVLzfEJrCXFP9GveS8R1M7x",
+            alt: "Proceso de peeling gingival",
           },
           {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Antes y después de elevación de seno",
-          },
-          {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Radiografía de elevación de seno maxilar",
+            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZhoodhD613u9y4X012ElMxIWF6vOoTqP7Kcnf",
+            alt: "Antes y después de peeling gingival",
           },
         ],
       },
     ],
   },
   {
-    id: "estetica-dental",
-    name: "Estética Dental",
-    icon: Smile,
+    id: "prevencion",
+    name: "Higiene y Prevención",
+    icon: Shield,
     treatments: [
       {
-        id: "carillas",
-        name: "Carillas Dentales",
+        id: "profilaxis",
+        name: "Profilaxis",
         description:
-          "Láminas delgadas de porcelana que se adhieren a la superficie del diente para mejorar su apariencia.",
+          "Limpieza dental profesional para prevenir enfermedades periodontales y mantener una óptima salud bucal.",
         images: [
           {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Proceso de colocación de carillas",
+            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZrWhQdFI4a95z3DBkW1yVEZwJlAXgIoFxncfj",
+            alt: "Procedimiento de profilaxis dental",
           },
           {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Antes y después de carillas dentales",
+            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZTS9ZVSjzaQAcb2GUWtr0kMs9V3DpfY6oPSuB",
+            alt: "Antes y después de profilaxis",
           },
           {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Detalle de carillas dentales",
-          },
-        ],
-      },
-      {
-        id: "blanqueamiento",
-        name: "Blanqueamiento Dental",
-        description:
-          "Tratamiento para aclarar el color de los dientes, eliminando manchas y decoloraciones.",
-        images: [
-          {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Proceso de blanqueamiento dental",
-          },
-          {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Antes y después de blanqueamiento",
-          },
-          {
-            src: "/placeholder.svg?height=400&width=600",
-            alt: "Equipo de blanqueamiento dental",
+            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZx1L021wtSAslWR2wGXmOoYIy9fgrbP4vdeha",
+            alt: "Equipo de profilaxis dental",
           },
         ],
       },

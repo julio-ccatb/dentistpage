@@ -12,6 +12,7 @@ import {
   Sparkles,
   SmileIcon as Tooth,
 } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
@@ -89,14 +90,16 @@ export function ServicesSection() {
               <p className="mb-6 text-sm text-gray-600 sm:text-base">
                 {service.description}
               </p>
-              <Button
-                variant="outline"
-                size="sm"
-                className="mt-2 border-rose-300 text-sm text-rose-600 hover:bg-rose-50 hover:text-rose-900 sm:text-base"
-              >
-                Saber más
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <Link href={"/services"}>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="mt-2 border-rose-300 text-sm text-rose-600 hover:bg-rose-50 hover:text-rose-900 sm:text-base"
+                >
+                  Saber más
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </motion.div>
           ))}
         </div>
