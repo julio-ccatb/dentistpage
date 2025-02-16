@@ -7,86 +7,89 @@ import { GraduationCap, Award, Smile, Heart, ChevronRight } from "lucide-react";
 
 const profileData = [
   {
-    category: "Implantología Avanzada",
+    category: "Especialidades Odontológicas",
     icon: Smile,
     color: "bg-rose-500",
     items: [
       {
-        title: "Implantes de Carga Inmediata",
+        title: "Periodoncia e Implantología Oral",
         description:
-          "Especialista en técnicas de implantación y carga en el mismo día",
+          "Especialista en el tratamiento de enfermedades de las encías y colocación de implantes dentales.",
       },
       {
-        title: "Regeneración Ósea Guiada",
+        title: "Ortodoncia y Prótesis",
         description:
-          "Experta en procedimientos de aumento óseo para implantes complejos",
+          "Corrección de alineación dental y rehabilitación con prótesis dentales.",
       },
       {
-        title: "Implantes All-on-4 y All-on-6",
+        title: "Odontopediatría y Cirugía Maxilofacial",
         description:
-          "Soluciones completas de arco con técnicas mínimamente invasivas",
+          "Cuidado dental infantil y procedimientos quirúrgicos orales.",
       },
     ],
   },
   {
-    category: "Formación Especializada",
+    category: "Formación Académica",
     icon: GraduationCap,
     color: "bg-green-500",
     items: [
       {
-        title: "Doctorado en Odontología",
+        title: "Doctora en Estomatología",
         description:
-          "Universidad Complutense de Madrid, con enfoque en implantología",
+          "Graduada de la Pontificia Universidad Católica Madre y Maestra (2016).",
       },
       {
         title: "Máster en Periodoncia e Implantología",
-        description: "Universidad de Barcelona",
+        description:
+          "Especialización completada en la Pontificia Universidad Católica Madre y Maestra (2019).",
       },
       {
-        title: "Formación Continua",
-        description: "Cursos avanzados en implantología digital y guiada",
+        title: "Educación Continuada",
+        description:
+          "Participación en congresos nacionales e internacionales para actualización profesional.",
       },
     ],
   },
   {
-    category: "Filosofía de Tratamiento",
+    category: "Filosofía de Trabajo",
     icon: Heart,
     color: "bg-purple-500",
     items: [
       {
-        title: "Planificación 3D Personalizada",
-        description:
-          "Uso de tecnología de vanguardia para planificar cada implante",
-      },
-      {
-        title: "Enfoque Mínimamente Invasivo",
-        description:
-          "Técnicas que minimizan el trauma y aceleran la recuperación",
-      },
-      {
         title: "Atención Integral",
         description:
-          "Consideración de aspectos estéticos y funcionales en cada tratamiento",
+          "Enfoque en salud bucal global con tratamientos personalizados.",
+      },
+      {
+        title: "Uso de Tecnología Avanzada",
+        description:
+          "Implementación de técnicas y equipos modernos para mejorar los tratamientos.",
+      },
+      {
+        title: "Ética y Compromiso",
+        description:
+          "Compromiso con la excelencia y el bienestar de los pacientes.",
       },
     ],
   },
   {
-    category: "Logros Profesionales",
+    category: "Logros y Reconocimientos",
     icon: Award,
     color: "bg-yellow-500",
     items: [
       {
-        title: "Reconocimiento Internacional",
-        description: "Premio a la innovación en técnicas de implantología",
-      },
-      {
-        title: "Investigación Pionera",
-        description: "Publicaciones sobre nuevos métodos de osteointegración",
-      },
-      {
-        title: "Clínica de Referencia",
+        title: "Experiencia Profesional",
         description:
-          "Fundadora de un centro especializado en implantología avanzada",
+          "Más de 9 años de trabajo en clínicas del sector público y privado.",
+      },
+      {
+        title: "Pertenencia a Asociaciones",
+        description: "Miembro del Colegio Dominicano de Odontólogos.",
+      },
+      {
+        title: "Clínica Propia",
+        description:
+          "Dirección de su consultorio en Santo Domingo, con un equipo multidisciplinario.",
       },
     ],
   },

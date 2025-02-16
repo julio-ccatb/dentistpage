@@ -4,52 +4,58 @@ import { motion } from "framer-motion";
 import {
   SmileIcon as Tooth,
   Smile,
-  Microscope,
-  Brain,
-  HeartPulse,
   Stethoscope,
+  Locate,
+  Braces,
+  User2,
+  Baby,
 } from "lucide-react";
 
 export function Expertise() {
   const expertiseAreas = [
     {
-      title: "Periodoncia Avanzada",
+      title: "Periodoncia e Implantología Oral",
       description:
-        "Tratamientos especializados para enfermedades de las encías y tejidos de soporte dental.",
-      icon: Tooth,
-    },
-    {
-      title: "Implantología Dental",
-      description:
-        "Colocación de implantes dentales con técnicas mínimamente invasivas y de carga inmediata.",
+        "Especializada en el tratamiento de enfermedades de las encías y colocación de implantes dentales.",
       icon: Smile,
     },
     {
-      title: "Regeneración Tisular",
+      title: "Endodoncia",
       description:
-        "Técnicas innovadoras para la regeneración de hueso y tejidos blandos en la cavidad oral.",
-      icon: Microscope,
+        "Tratamientos avanzados para salvar dientes afectados por caries profundas o infecciones.",
+      icon: Tooth,
     },
     {
-      title: "Odontología Neurofocal",
+      title: "Prótesis Dental",
       description:
-        "Enfoque integral que considera la relación entre la salud dental y el sistema nervioso.",
-      icon: Brain,
+        "Rehabilitación oral con prótesis fijas y removibles para restaurar la funcionalidad dental.",
+      icon: Locate,
     },
     {
-      title: "Periodoncia y Salud Sistémica",
+      title: "Ortodoncia",
       description:
-        "Estudio de la relación entre las enfermedades periodontales y condiciones sistémicas como diabetes y enfermedades cardiovasculares.",
-      icon: HeartPulse,
+        "Corrección de la alineación dental y mordida mediante el uso de brackets y alineadores.",
+      icon: Braces,
     },
     {
-      title: "Medicina Periodontal",
+      title: "Odontología General",
       description:
-        "Manejo de las manifestaciones orales de enfermedades sistémicas y su impacto en la salud periodontal.",
+        "Atención odontológica integral para el cuidado y mantenimiento de la salud bucal.",
+      icon: User2,
+    },
+    {
+      title: "Odontopediatría",
+      description:
+        "Cuidado dental especializado para niños, promoviendo una salud bucal desde la infancia.",
+      icon: Baby,
+    },
+    {
+      title: "Cirugía Maxilofacial",
+      description:
+        "Procedimientos quirúrgicos para tratar anomalías faciales y problemas en los maxilares.",
       icon: Stethoscope,
     },
   ];
-
   return (
     <section className="bg-white py-16 sm:py-20">
       <div className="container mx-auto px-4">

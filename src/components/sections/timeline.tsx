@@ -6,62 +6,59 @@ import {
   GraduationCap,
   Award,
   Briefcase,
-  Star,
-  Microscope,
-  Trophy,
+  BookOpen,
+  Users,
+  Landmark,
 } from "lucide-react";
-
 const timelineEvents = [
   {
-    year: "2007",
-    title: "Inicio de la Carrera",
+    year: "2016",
+    title: "Graduación en Estomatología",
     description:
-      "Comienza sus estudios de Odontología en la Universidad Complutense de Madrid.",
+      "Obtiene el título de Doctora en Estomatología en la Pontificia Universidad Católica Madre y Maestra.",
     icon: GraduationCap,
-    color: "bg-rose-500",
+    color: "bg-blue-500",
   },
   {
-    year: "2012",
-    title: "Graduación con Honores",
+    year: "2019",
+    title: "Especialización en Periodoncia e Implantología",
     description:
-      "Se gradúa con honores y decide especializarse en Periodoncia.",
+      "Completa su maestría en Periodoncia e Implantología Oral en la Pontificia Universidad Católica Madre y Maestra.",
     icon: Award,
     color: "bg-green-500",
   },
   {
-    year: "2014",
-    title: "Especialización Completada",
+    year: "2016 - Actualidad",
+    title: "Experiencia Profesional",
     description:
-      "Completa su especialización en Periodoncia e Implantología en la Universidad de Barcelona.",
-    icon: Star,
-    color: "bg-yellow-500",
-  },
-  {
-    year: "2016",
-    title: "Apertura de la Clínica",
-    description:
-      "Inaugura su propia clínica dental, enfocada en tratamientos periodontales avanzados.",
+      "Más de 9 años de experiencia en clínicas del sector público y privado, además de ser miembro del Colegio Dominicano de Odontólogos.",
     icon: Briefcase,
     color: "bg-purple-500",
   },
   {
-    year: "2020",
-    title: "Innovación Tecnológica",
+    year: "2020 - Actualidad",
+    title: "Participación en Congresos",
     description:
-      "Implementa tecnologías de vanguardia en su clínica, incluyendo escáneres 3D y sistemas de implantes guiados por computadora.",
-    icon: Microscope,
+      "Asiste a congresos nacionales e internacionales para mantenerse actualizada en las últimas tendencias de la odontología.",
+    icon: BookOpen,
+    color: "bg-yellow-500",
+  },
+  {
+    year: "Actualidad",
+    title: "Clínica Multidisciplinaria",
+    description:
+      "Cuenta con un equipo especializado en diversas áreas de la odontología para ofrecer una atención integral.",
+    icon: Users,
     color: "bg-indigo-500",
   },
   {
-    year: "2023",
-    title: "Reconocimiento Internacional",
-    description:
-      "Recibe un premio internacional por su contribución a la investigación en regeneración tisular periodontal.",
-    icon: Trophy,
+    year: "Actualidad",
+    title: "Consultorio en Santo Domingo",
+    description: "Dirige su consultorio en la Clínica Dental Padilla",
+    icon: Landmark,
     color: "bg-red-500",
   },
 ];
-
 function TimelineEvent({
   event,
   index,
