@@ -1,6 +1,6 @@
 "use client";
 
-import { SmileIcon as Tooth, Phone, Clock, MapPin } from "lucide-react";
+import { Phone, Clock, MapPin } from "lucide-react";
 
 import {
   SiTiktok,
@@ -9,6 +9,7 @@ import {
   SiX,
 } from "@icons-pack/react-simple-icons";
 import Link from "next/link";
+import Image from "next/image";
 
 export function FooterSection() {
   return (
@@ -16,28 +17,28 @@ export function FooterSection() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div>
-            <div className="mb-4 flex items-center">
-              <Tooth className="mr-2 h-6 w-6 text-rose-300 sm:h-8 sm:w-8" />
-              <span className="text-lg font-bold text-white sm:text-xl">
-                Clínica Dental
-              </span>
-            </div>
-            <p className="mb-4 text-sm text-rose-200 sm:text-base">
-              Cuidando tu sonrisa con profesionalidad y dedicación.
-            </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-rose-300 hover:text-rose-100">
-                <SiFacebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-rose-300 hover:text-rose-100">
-                <SiInstagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-rose-300 hover:text-rose-100">
-                <SiX className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-rose-300 hover:text-rose-100">
-                <SiTiktok className="h-5 w-5" />
-              </a>
+            <div className="mb-4 flex flex-col items-center gap-4 sm:items-start">
+              <Image
+                quality={100}
+                src="/Imagotipo_Blanco.png"
+                alt="Clínica Dental Dra. Ofara Pacheco"
+                width={200}
+                height={50}
+              />
+              <div className="flex space-x-4">
+                <a href="#" className="text-rose-300 hover:text-rose-100">
+                  <SiFacebook className="h-5 w-5" />
+                </a>
+                <a href="#" className="text-rose-300 hover:text-rose-100">
+                  <SiInstagram className="h-5 w-5" />
+                </a>
+                <a href="#" className="text-rose-300 hover:text-rose-100">
+                  <SiX className="h-5 w-5" />
+                </a>
+                <a href="#" className="text-rose-300 hover:text-rose-100">
+                  <SiTiktok className="h-5 w-5" />
+                </a>
+              </div>
             </div>
           </div>
           <div>
