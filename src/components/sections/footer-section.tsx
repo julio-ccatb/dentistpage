@@ -66,7 +66,7 @@ export function FooterSection() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="#sobre-mi"
+                  href="/about"
                   className="text-sm text-rose-200 hover:text-white sm:text-base"
                 >
                   Sobre Mí
@@ -74,7 +74,7 @@ export function FooterSection() {
               </li>
               <li>
                 <Link
-                  href="#servicios"
+                  href="/services"
                   className="text-sm text-rose-200 hover:text-white sm:text-base"
                 >
                   Servicios
@@ -105,7 +105,7 @@ export function FooterSection() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="#"
+                  href="/services"
                   className="text-sm text-rose-200 hover:text-white sm:text-base"
                 >
                   Periodoncia
@@ -113,7 +113,7 @@ export function FooterSection() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/services"
                   className="text-sm text-rose-200 hover:text-white sm:text-base"
                 >
                   Implantes Dentales
@@ -121,7 +121,7 @@ export function FooterSection() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/services"
                   className="text-sm text-rose-200 hover:text-white sm:text-base"
                 >
                   Estética Dental
@@ -129,7 +129,7 @@ export function FooterSection() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/services"
                   className="text-sm text-rose-200 hover:text-white sm:text-base"
                 >
                   Odontología General
@@ -144,9 +144,13 @@ export function FooterSection() {
             <ul className="space-y-2">
               <li className="flex items-center">
                 <Phone className="mr-2 h-5 w-5 text-rose-300" />
-                <span className="text-sm text-rose-200 sm:text-base">
-                  +34 123 456 789
-                </span>
+
+                <Link
+                  href={"tel:+18292909120"}
+                  className="text-sm text-rose-200 sm:text-base"
+                >
+                  +1 (829) 290-9120
+                </Link>
               </li>
               <li className="flex items-center">
                 <MapPin className="mr-2 h-5 w-7 text-rose-300" />
