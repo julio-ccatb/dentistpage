@@ -95,7 +95,8 @@ export function ContactSection() {
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-rose-600" />
                 <span className="text-base text-gray-700 sm:text-lg">
-                  Calle Principal 123, Madrid
+                  C. Espiral #4, esquina calle 13, Santo Domingo. Padilla
+                  clínica dental.
                 </span>
               </div>
               <div className="flex items-center space-x-3">
@@ -109,7 +110,7 @@ export function ContactSection() {
           <div className="space-y-6 sm:space-y-8">
             <div className="aspect-w-16 aspect-h-9">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.7479906065996!2d-3.7037974846009275!3d40.41694637936409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sPuerta%20del%20Sol%2C%20Madrid%2C%20Spain!5e0!3m2!1sen!2sus!4v1645454332337!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.181201214053!2d-69.95094122480944!3d18.47544968260935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf8987c442beb9%3A0x308a4a0d8aaee248!2sPadilla%20Cl%C3%ADnica%20Dental!5e0!3m2!1ses-419!2sdo!4v1740400432063!5m2!1ses-419!2sdo"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

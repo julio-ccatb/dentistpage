@@ -130,9 +130,10 @@ export function FooterSection() {
                 </span>
               </li>
               <li className="flex items-center">
-                <MapPin className="mr-2 h-5 w-5 text-rose-300" />
+                <MapPin className="mr-2 h-5 w-7 text-rose-300" />
                 <span className="text-sm text-rose-200 sm:text-base">
-                  Calle Principal 123, Madrid
+                  C. Espiral #4, esquina calle 13, Santo Domingo. Padilla
+                  clínica dental.
                 </span>
               </li>
               <li className="flex items-center">
