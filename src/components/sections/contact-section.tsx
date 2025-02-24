@@ -7,7 +7,7 @@ import { api } from "@/trpc/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Clock, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 
 export function ContactSection() {
   const { mutate } = api.mailer.create.useMutation();
@@ -21,7 +21,8 @@ export function ContactSection() {
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = (data: Contact) => {
+  const onSubmit: SubmitHandler<Contact> = (data: Contact, e) => {
+    e?.preventDefault();
     console.log("Formulario enviado:", data);
     mutate(data);
     reset(); // Resetear el formulario después del envío
