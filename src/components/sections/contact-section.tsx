@@ -24,7 +24,7 @@ export function ContactSection() {
   const onSubmit = (data: Contact) => {
     console.log("Formulario enviado:", data);
     mutate(data);
-    // reset(); // Resetear el formulario después del envío
+    reset(); // Resetear el formulario después del envío
   };
 
   return (
