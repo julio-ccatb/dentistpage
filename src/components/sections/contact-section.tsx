@@ -3,6 +3,7 @@
 import { Phone, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/components/animated-section";
+import Link from "next/link";
 
 export function ContactSection() {
   return (
@@ -88,9 +89,12 @@ export function ContactSection() {
               </h3>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-rose-600" />
-                <span className="text-base text-gray-700 sm:text-lg">
-                  +34 123 456 789
-                </span>
+                <Link
+                  href={"tel:+18292909120"}
+                  className="text-base text-gray-700 sm:text-lg"
+                >
+                  +1 (829) 290-9120
+                </Link>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-rose-600" />

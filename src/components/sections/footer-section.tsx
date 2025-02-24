@@ -1,15 +1,15 @@
 "use client";
 
-import { Phone, Clock, MapPin } from "lucide-react";
+import { Clock, MapPin, Phone } from "lucide-react";
 
 import {
-  SiTiktok,
   SiFacebook,
+  SiGmail,
   SiInstagram,
-  SiX,
+  SiTiktok,
 } from "@icons-pack/react-simple-icons";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 export function FooterSection() {
   return (
@@ -18,26 +18,44 @@ export function FooterSection() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div>
             <div className="mb-4 flex flex-col items-center gap-4 sm:items-start">
-              <Image
-                quality={100}
-                src="/Imagotipo_Blanco.png"
-                alt="Clínica Dental Dra. Ofara Pacheco"
-                width={200}
-                height={50}
-              />
-              <div className="flex space-x-4">
-                <a href="#" className="text-rose-300 hover:text-rose-100">
-                  <SiFacebook className="h-5 w-5" />
-                </a>
-                <a href="#" className="text-rose-300 hover:text-rose-100">
-                  <SiInstagram className="h-5 w-5" />
-                </a>
-                <a href="#" className="text-rose-300 hover:text-rose-100">
-                  <SiX className="h-5 w-5" />
-                </a>
-                <a href="#" className="text-rose-300 hover:text-rose-100">
-                  <SiTiktok className="h-5 w-5" />
-                </a>
+              <div className="flex flex-col items-center gap-4">
+                <Image
+                  quality={100}
+                  src="/Imagotipo_Blanco.png"
+                  alt="Clínica Dental Dra. Ofara Pacheco"
+                  width={200}
+                  height={50}
+                />
+                <div className="flex space-x-4">
+                  <Link
+                    href={"mailto:info@drapacheco.com"}
+                    target="_blank"
+                    className="text-rose-300 hover:text-rose-100"
+                  >
+                    <SiGmail className="h-5 w-5" />
+                  </Link>
+                  <Link
+                    href="http://instagram.com/_u/dra.ofarapacheco/"
+                    target="_blank"
+                    className="text-rose-300 hover:text-rose-100"
+                  >
+                    <SiInstagram className="h-5 w-5" />
+                  </Link>
+                  <Link
+                    href="https://www.facebook.com/ofara.pacheco"
+                    target="_blank"
+                    className="text-rose-300 hover:text-rose-100"
+                  >
+                    <SiFacebook className="h-5 w-5" />
+                  </Link>
+                  <Link
+                    href="https://www.tiktok.com/@ofarap"
+                    target="_blank"
+                    className="text-rose-300 hover:text-rose-100"
+                  >
+                    <SiTiktok className="h-5 w-5" />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -148,8 +166,7 @@ export function FooterSection() {
         </div>
         <div className="mt-8 border-t border-rose-800 pt-8 text-center">
           <p className="text-sm text-rose-200 sm:text-base">
-            &copy; 2025 Clínica Dental Dra. Ofara Pacheco. Todos los derechos
-            reservados.
+            &copy; 2025 Dra. Ofara Pacheco. Todos los derechos reservados.
           </p>
         </div>
       </div>
