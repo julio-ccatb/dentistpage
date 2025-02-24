@@ -1,29 +1,63 @@
-# Create T3 App
+# Dentist Page
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+A modern and responsive website for a dental clinic, featuring a landing page, contact section, about page, and services offered.
 
-## What's next? How do I make an app with this?
+## Features
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+- **Landing Page**: A visually appealing homepage to attract visitors.
+- **About Section**: Information about the clinic, team, and mission.
+- **Services**: List of dental services provided.
+- **Contact Section**: Contact form for inquiries.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Installation
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+1. Clone the repository:
 
-## Learn More
+   ```sh
+   git clone https://github.com/julio-ccatb/dentistpage.git
+   cd dentistpage
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+   ```
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+2. Install dependencies:
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+   ```sh
+   npm install
+   ```
 
-## How do I deploy this?
+3. Create a `.env` file in the root of the project and configure the following environment variables:
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+   ```env
+   DATABASE_URL="file:./db.sqlite"
+   SMTP_HOST=<your_smtp_host>
+   SMTP_PORT=<your_smtp_port>
+   SMTP_USER=<your_smtp_user>
+   CLIENT_ID=<your_client_id>
+   CLIENT_SECRET=<your_client_secret>
+   CLIENT_REFRESH_TOKEN=<your_client_refresh_token>
+   ```
+
+4. Run the project:
+   ```sh
+   npm run dev
+   ```
+
+## Technologies Used
+
+- **Next.js / React** for frontend development
+- **Tailwind CSS** for styling
+- **Prisma** for database management
+- **Nodemailer** for email handling
+- **tRPC** for type-safe API communication
+
+## Contributing
+
+Feel free to submit issues and pull requests to improve the project.
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+**Author:** Julio Castaño

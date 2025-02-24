@@ -1,11 +1,32 @@
 "use client";
 
-import { Phone, MapPin, Clock } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/components/animated-section";
+import { Button } from "@/components/ui/button";
+import contactSchema, { type Contact } from "@/globals/types";
+import { api } from "@/trpc/react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Clock, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
+import { useForm } from "react-hook-form";
 
 export function ContactSection() {
+  const { mutate } = api.mailer.create.useMutation();
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<Contact>({
+    resolver: zodResolver(contactSchema),
+  });
+
+  const onSubmit = (data: Contact) => {
+    console.log("Formulario enviado:", data);
+    mutate(data);
+    // reset(); // Resetear el formulario después del envío
+  };
+
   return (
     <AnimatedSection className="bg-rose-50 py-16 sm:py-20">
       <div id="contacto" className="container mx-auto px-4">
@@ -14,73 +35,70 @@ export function ContactSection() {
         </h2>
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 sm:gap-12 md:grid-cols-2">
           <div className="space-y-6 sm:space-y-8">
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
-                  <label
-                    htmlFor="name"
-                    className="mb-1 block text-sm font-medium text-gray-700"
-                  >
+                  <label className="mb-1 block text-sm font-medium text-gray-700">
                     Nombre
                   </label>
                   <input
                     type="text"
-                    id="name"
-                    name="name"
+                    {...register("name")}
                     className="w-full rounded-md border border-gray-300 px-3 py-2 text-base shadow-sm focus:border-rose-500 focus:ring-rose-500"
-                    required
                   />
+                  {errors.name && (
+                    <p className="text-sm text-red-500">
+                      {errors.name.message}
+                    </p>
+                  )}
                 </div>
                 <div>
-                  <label
-                    htmlFor="email"
-                    className="mb-1 block text-sm font-medium text-gray-700"
-                  >
+                  <label className="mb-1 block text-sm font-medium text-gray-700">
                     Email
                   </label>
                   <input
                     type="email"
-                    id="email"
-                    name="email"
+                    {...register("email")}
                     className="w-full rounded-md border border-gray-300 px-3 py-2 text-base shadow-sm focus:border-rose-500 focus:ring-rose-500"
-                    required
                   />
+                  {errors.email && (
+                    <p className="text-sm text-red-500">
+                      {errors.email.message}
+                    </p>
+                  )}
                 </div>
               </div>
               <div>
-                <label
-                  htmlFor="phone"
-                  className="mb-1 block text-sm font-medium text-gray-700"
-                >
+                <label className="mb-1 block text-sm font-medium text-gray-700">
                   Teléfono
                 </label>
                 <input
                   type="tel"
-                  id="phone"
-                  name="phone"
+                  {...register("phone")}
                   className="w-full rounded-md border border-gray-300 px-3 py-2 text-base shadow-sm focus:border-rose-500 focus:ring-rose-500"
                 />
               </div>
               <div>
-                <label
-                  htmlFor="message"
-                  className="mb-1 block text-sm font-medium text-gray-700"
-                >
+                <label className="mb-1 block text-sm font-medium text-gray-700">
                   Mensaje
                 </label>
                 <textarea
-                  id="message"
-                  name="message"
+                  {...register("message")}
                   rows={4}
                   className="w-full rounded-md border border-gray-300 px-3 py-2 text-base shadow-sm focus:border-rose-500 focus:ring-rose-500"
-                  required
-                ></textarea>
+                />
+                {errors.message && (
+                  <p className="text-sm text-red-500">
+                    {errors.message.message}
+                  </p>
+                )}
               </div>
               <Button
                 type="submit"
+                disabled={isSubmitting}
                 className="w-full bg-rose-600 text-base text-white hover:bg-rose-700 sm:text-lg"
               >
-                Enviar mensaje
+                {isSubmitting ? "Enviando..." : "Enviar mensaje"}
               </Button>
             </form>
             <div className="space-y-4">
@@ -90,7 +108,7 @@ export function ContactSection() {
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-rose-600" />
                 <Link
-                  href={"tel:+18292909120"}
+                  href="tel:+18292909120"
                   className="text-base text-gray-700 sm:text-lg"
                 >
                   +1 (829) 290-9120
