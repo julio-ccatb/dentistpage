@@ -24,17 +24,23 @@ export function Header() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <Link href={"/"} className="flex items-center">
+          <Link href={"/"} className="flex items-center justify-center gap-4">
             <Image
-              src={"/tooth-svgrepo-com.svg"}
+              src={"/Favicon_Rojo Claro.png"}
               alt="logo"
+              quality={100}
+              objectFit="contain"
               height={50}
               width={50}
-              className="h-6 w-6 text-rose-600 sm:h-8 sm:w-8"
             />
-            <span className="ml-2 text-lg font-bold text-rose-900 sm:text-xl">
-              Dra. Ofara Pacheco
-            </span>
+            <Image
+              quality={100}
+              src={"/Logotipo_Rojo Claro.png"}
+              alt="Clínica Dental Dra. Ofara Pacheco"
+              objectFit="contain"
+              height={150}
+              width={250}
+            />
           </Link>
         </motion.div>
         <nav className="hidden md:block">
