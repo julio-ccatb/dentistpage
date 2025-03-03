@@ -9,7 +9,7 @@ const profileData = [
   {
     category: "Especialidades Odontológicas",
     icon: Smile,
-    color: "bg-rose-500",
+    color: "bg-pink-500",
     items: [
       {
         title: "Periodoncia e Implantología Oral",
@@ -118,7 +118,7 @@ export function DoctorProfile() {
                 height={400}
                 className="rounded-lg shadow-xl"
               />
-              <div className="absolute -bottom-4 -right-4 rounded-full bg-rose-500 p-3 text-white shadow-lg">
+              <div className="absolute -bottom-4 -right-4 rounded-full bg-pink-500 p-3 text-white shadow-lg">
                 <Smile className="h-8 w-8" />
               </div>
             </div>
@@ -126,7 +126,7 @@ export function DoctorProfile() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-6 text-3xl font-bold text-rose-900 sm:text-4xl"
+              className="mt-6 text-3xl font-bold text-pink-900 sm:text-4xl"
             >
               Dra. Ofara Pacheco
             </motion.h2>
@@ -134,15 +134,15 @@ export function DoctorProfile() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="mt-2 text-xl font-semibold text-rose-600"
+              className="mt-2 text-xl font-semibold text-pink-600"
             >
-              Implantóloga Experta
+              Periodoncista-Implantologa
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="mt-4 text-lg text-rose-800"
+              className="mt-4 text-lg text-pink-800"
             >
               Especialista en Implantología Avanzada y Periodoncia
             </motion.p>
@@ -152,7 +152,7 @@ export function DoctorProfile() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="mb-8 text-lg text-rose-800"
+              className="mb-8 text-lg text-pink-800"
             >
               Con más de una década de experiencia, la Dra. Ofara Pacheco se ha
               consolidado como una referente en implantología avanzada. Su
@@ -171,7 +171,7 @@ export function DoctorProfile() {
                   className={`flex items-center justify-between rounded-lg p-4 font-semibold transition-all ${
                     activeCategory === category.category
                       ? `${category.color} text-white shadow-lg`
-                      : "bg-white text-rose-800 hover:bg-rose-50"
+                      : "bg-white text-pink-800 hover:bg-pink-50"
                   }`}
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
@@ -207,10 +207,10 @@ export function DoctorProfile() {
                       transition={{ duration: 0.3, delay: index * 0.1 }}
                       className="mb-4 last:mb-0"
                     >
-                      <h3 className="mb-2 text-lg font-semibold text-rose-900">
+                      <h3 className="mb-2 text-lg font-semibold text-pink-900">
                         {item.title}
                       </h3>
-                      <p className="text-rose-800">{item.description}</p>
+                      <p className="text-pink-800">{item.description}</p>
                     </motion.div>
                   ))}
               </motion.div>

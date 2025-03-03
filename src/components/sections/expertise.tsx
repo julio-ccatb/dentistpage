@@ -64,10 +64,10 @@ export function Expertise() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="mb-8 text-center text-3xl font-bold text-rose-900 sm:mb-12 sm:text-4xl">
+          <h2 className="mb-8 text-center text-3xl font-bold text-pink-900 sm:mb-12 sm:text-4xl">
             Áreas de Experiencia
           </h2>
-          <p className="mx-auto mb-12 max-w-3xl text-center text-lg text-rose-800">
+          <p className="mx-auto mb-12 max-w-3xl text-center text-lg text-pink-800">
             La Dra. Ofara Pacheco se especializa en diversas áreas de la
             odontología, con un enfoque particular en la periodoncia y sus
             conexiones con la salud general.
@@ -83,14 +83,14 @@ export function Expertise() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="mb-4 flex items-center">
-                <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full bg-rose-100">
-                  <area.icon className="h-6 w-6 text-rose-600" />
+                <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full bg-pink-100">
+                  <area.icon className="h-6 w-6 text-pink-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-rose-900">
+                <h3 className="text-xl font-semibold text-pink-900">
                   {area.title}
                 </h3>
               </div>
-              <p className="text-rose-800">{area.description}</p>
+              <p className="text-pink-800">{area.description}</p>
             </motion.div>
           ))}
         </div>

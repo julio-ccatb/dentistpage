@@ -48,7 +48,7 @@ export function Header() {
             <li>
               <Link
                 href="/about"
-                className="text-sm text-gray-600 transition-colors hover:text-rose-600 lg:text-base"
+                className="text-sm text-gray-600 transition-colors hover:text-pink-600 lg:text-base"
               >
                 Sobre mí
               </Link>
@@ -56,7 +56,7 @@ export function Header() {
             <li>
               <Link
                 href="/services"
-                className="text-sm text-gray-600 transition-colors hover:text-rose-600 lg:text-base"
+                className="text-sm text-gray-600 transition-colors hover:text-pink-600 lg:text-base"
               >
                 Servicios
               </Link>
@@ -65,7 +65,7 @@ export function Header() {
             <li>
               <Link
                 href="/#contacto"
-                className="text-sm text-gray-600 transition-colors hover:text-rose-600 lg:text-base"
+                className="text-sm text-gray-600 transition-colors hover:text-pink-600 lg:text-base"
               >
                 Contacto
               </Link>
@@ -74,7 +74,7 @@ export function Header() {
         </nav>
         <div className="hidden md:block">
           <Link target="_blank" href={globalVariable.whatsappLink}>
-            <Button className="bg-rose-600 text-sm font-semibold text-white hover:bg-rose-700 lg:text-base">
+            <Button className="bg-pink-600 text-sm font-semibold text-white hover:bg-pink-700 lg:text-base">
               Agenda tu cita
               <Calendar className="mr-2 h-4 w-4" />
             </Button>
@@ -82,9 +82,9 @@ export function Header() {
         </div>
         <button className="md:hidden" onClick={toggleMenu}>
           {isMenuOpen ? (
-            <X className="h-6 w-6 text-rose-600" />
+            <X className="h-6 w-6 text-pink-600" />
           ) : (
-            <Menu className="h-6 w-6 text-rose-600" />
+            <Menu className="h-6 w-6 text-pink-600" />
           )}
         </button>
       </div>
@@ -102,7 +102,7 @@ export function Header() {
                 <li>
                   <Link
                     href="/about"
-                    className="block text-base text-gray-600 transition-colors hover:text-rose-600"
+                    className="block text-base text-gray-600 transition-colors hover:text-pink-600"
                     onClick={toggleMenu}
                   >
                     Sobre mí
@@ -111,7 +111,7 @@ export function Header() {
                 <li>
                   <Link
                     href="/services"
-                    className="block text-base text-gray-600 transition-colors hover:text-rose-600"
+                    className="block text-base text-gray-600 transition-colors hover:text-pink-600"
                     onClick={toggleMenu}
                   >
                     Servicios
@@ -121,7 +121,7 @@ export function Header() {
                 <li>
                   <Link
                     href="/#contacto"
-                    className="block text-base text-gray-600 transition-colors hover:text-rose-600"
+                    className="block text-base text-gray-600 transition-colors hover:text-pink-600"
                     onClick={toggleMenu}
                   >
                     Contacto
@@ -129,7 +129,7 @@ export function Header() {
                 </li>
                 <li>
                   <Link target="_blank" href={globalVariable.whatsappLink}>
-                    <Button className="w-full bg-rose-600 text-base font-semibold text-white hover:bg-rose-700">
+                    <Button className="w-full bg-pink-600 text-base font-semibold text-white hover:bg-pink-700">
                       Agenda tu cita
                       <Calendar className="mr-2 h-4 w-4" />
                     </Button>

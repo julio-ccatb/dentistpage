@@ -138,7 +138,7 @@ export function TreatmentSelector() {
       {/* Removed mt-20, added id for anchor link */}
       <div className="container mx-auto px-4">
         <div className="mb-8">
-          <h2 className="mb-6 text-3xl font-bold text-rose-900">
+          <h2 className="mb-6 text-3xl font-bold text-pink-900">
             Nuestros Tratamientos
           </h2>
           <div className="flex flex-wrap gap-4">
@@ -152,8 +152,8 @@ export function TreatmentSelector() {
                 }}
                 className={`rounded-full px-4 py-2 transition-colors ${
                   selectedGroup?.id === group.id
-                    ? "bg-rose-600 text-white"
-                    : "bg-white text-rose-900 hover:bg-rose-100"
+                    ? "bg-pink-600 text-white"
+                    : "bg-white text-pink-900 hover:bg-pink-100"
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -166,7 +166,7 @@ export function TreatmentSelector() {
         </div>
         <div className="flex flex-col gap-8 lg:flex-row">
           <div className="lg:w-1/3">
-            <h3 className="mb-4 text-2xl font-bold text-rose-900">
+            <h3 className="mb-4 text-2xl font-bold text-pink-900">
               {selectedGroup?.name}
             </h3>
             <div className="space-y-4">
@@ -179,8 +179,8 @@ export function TreatmentSelector() {
                   }}
                   className={`w-full rounded-lg p-4 text-left transition-colors ${
                     selectedTreatment?.id === treatment.id
-                      ? "bg-rose-600 text-white"
-                      : "bg-white text-rose-900 hover:bg-rose-100"
+                      ? "bg-pink-600 text-white"
+                      : "bg-white text-pink-900 hover:bg-pink-100"
                   }`}
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
@@ -199,10 +199,10 @@ export function TreatmentSelector() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
               >
-                <h3 className="mb-4 text-2xl font-bold text-rose-900">
+                <h3 className="mb-4 text-2xl font-bold text-pink-900">
                   {selectedTreatment?.name}
                 </h3>
-                <p className="mb-6 text-lg text-rose-800">
+                <p className="mb-6 text-lg text-pink-800">
                   {selectedTreatment?.description}
                 </p>
                 <div className="relative mb-4 aspect-video">
@@ -223,7 +223,7 @@ export function TreatmentSelector() {
                     <button
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
-                      className={`h-3 w-3 rounded-full ${currentImageIndex === index ? "bg-rose-600" : "bg-rose-200"}`}
+                      className={`h-3 w-3 rounded-full ${currentImageIndex === index ? "bg-pink-600" : "bg-pink-200"}`}
                       aria-label={`Ver imagen ${index + 1} de ${selectedTreatment.name}`}
                     />
                   ))}

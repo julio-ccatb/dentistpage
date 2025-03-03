@@ -13,7 +13,7 @@ import Link from "next/link";
 
 export function FooterSection() {
   return (
-    <footer className="bg-rose-900 py-12 text-white">
+    <footer className="bg-pink-900 py-12 text-white">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div>
@@ -30,28 +30,28 @@ export function FooterSection() {
                   <Link
                     href={"mailto:info@drapacheco.com"}
                     target="_blank"
-                    className="text-rose-300 hover:text-rose-100"
+                    className="text-pink-300 hover:text-pink-100"
                   >
                     <SiGmail className="h-5 w-5" />
                   </Link>
                   <Link
                     href="http://instagram.com/_u/dra.ofarapacheco/"
                     target="_blank"
-                    className="text-rose-300 hover:text-rose-100"
+                    className="text-pink-300 hover:text-pink-100"
                   >
                     <SiInstagram className="h-5 w-5" />
                   </Link>
                   <Link
                     href="https://www.facebook.com/ofara.pacheco"
                     target="_blank"
-                    className="text-rose-300 hover:text-rose-100"
+                    className="text-pink-300 hover:text-pink-100"
                   >
                     <SiFacebook className="h-5 w-5" />
                   </Link>
                   <Link
                     href="https://www.tiktok.com/@ofarap"
                     target="_blank"
-                    className="text-rose-300 hover:text-rose-100"
+                    className="text-pink-300 hover:text-pink-100"
                   >
                     <SiTiktok className="h-5 w-5" />
                   </Link>
@@ -60,14 +60,14 @@ export function FooterSection() {
             </div>
           </div>
           <div>
-            <h3 className="mb-4 text-base font-semibold text-rose-300 sm:text-lg">
+            <h3 className="mb-4 text-base font-semibold text-pink-300 sm:text-lg">
               Enlaces Rápidos
             </h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/about"
-                  className="text-sm text-rose-200 hover:text-white sm:text-base"
+                  className="text-sm text-pink-200 hover:text-white sm:text-base"
                 >
                   Sobre Mí
                 </Link>
@@ -75,7 +75,7 @@ export function FooterSection() {
               <li>
                 <Link
                   href="/services"
-                  className="text-sm text-rose-200 hover:text-white sm:text-base"
+                  className="text-sm text-pink-200 hover:text-white sm:text-base"
                 >
                   Servicios
                 </Link>
@@ -83,7 +83,7 @@ export function FooterSection() {
               <li>
                 <Link
                   href="#testimonios"
-                  className="text-sm text-rose-200 hover:text-white sm:text-base"
+                  className="text-sm text-pink-200 hover:text-white sm:text-base"
                 >
                   Testimonios
                 </Link>
@@ -91,7 +91,7 @@ export function FooterSection() {
               <li>
                 <Link
                   href="#contacto"
-                  className="text-sm text-rose-200 hover:text-white sm:text-base"
+                  className="text-sm text-pink-200 hover:text-white sm:text-base"
                 >
                   Contacto
                 </Link>
@@ -99,14 +99,14 @@ export function FooterSection() {
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 text-base font-semibold text-rose-300 sm:text-lg">
+            <h3 className="mb-4 text-base font-semibold text-pink-300 sm:text-lg">
               Servicios
             </h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/services"
-                  className="text-sm text-rose-200 hover:text-white sm:text-base"
+                  className="text-sm text-pink-200 hover:text-white sm:text-base"
                 >
                   Periodoncia
                 </Link>
@@ -114,7 +114,7 @@ export function FooterSection() {
               <li>
                 <Link
                   href="/services"
-                  className="text-sm text-rose-200 hover:text-white sm:text-base"
+                  className="text-sm text-pink-200 hover:text-white sm:text-base"
                 >
                   Implantes Dentales
                 </Link>
@@ -122,7 +122,7 @@ export function FooterSection() {
               <li>
                 <Link
                   href="/services"
-                  className="text-sm text-rose-200 hover:text-white sm:text-base"
+                  className="text-sm text-pink-200 hover:text-white sm:text-base"
                 >
                   Estética Dental
                 </Link>
@@ -130,7 +130,7 @@ export function FooterSection() {
               <li>
                 <Link
                   href="/services"
-                  className="text-sm text-rose-200 hover:text-white sm:text-base"
+                  className="text-sm text-pink-200 hover:text-white sm:text-base"
                 >
                   Odontología General
                 </Link>
@@ -138,38 +138,38 @@ export function FooterSection() {
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 text-base font-semibold text-rose-300 sm:text-lg">
+            <h3 className="mb-4 text-base font-semibold text-pink-300 sm:text-lg">
               Contacto
             </h3>
             <ul className="space-y-2">
               <li className="flex items-center">
-                <Phone className="mr-2 h-5 w-5 text-rose-300" />
+                <Phone className="mr-2 h-5 w-5 text-pink-300" />
 
                 <Link
                   href={"tel:+18292909120"}
-                  className="text-sm text-rose-200 sm:text-base"
+                  className="text-sm text-pink-200 sm:text-base"
                 >
                   +1 (829) 290-9120
                 </Link>
               </li>
               <li className="flex items-center">
-                <MapPin className="mr-2 h-5 w-7 text-rose-300" />
-                <span className="text-sm text-rose-200 sm:text-base">
+                <MapPin className="mr-2 h-5 w-7 text-pink-300" />
+                <span className="text-sm text-pink-200 sm:text-base">
                   C. Espiral #4, esquina calle 13, Santo Domingo. Padilla
                   clínica dental.
                 </span>
               </li>
               <li className="flex items-center">
-                <Clock className="mr-2 h-5 w-5 text-rose-300" />
-                <span className="text-sm text-rose-200 sm:text-base">
+                <Clock className="mr-2 h-5 w-5 text-pink-300" />
+                <span className="text-sm text-pink-200 sm:text-base">
                   Lun-Vie: 9:00-20:00
                 </span>
               </li>
             </ul>
           </div>
         </div>
-        <div className="mt-8 border-t border-rose-800 pt-8 text-center">
-          <p className="text-sm text-rose-200 sm:text-base">
+        <div className="mt-8 border-t border-pink-800 pt-8 text-center">
+          <p className="text-sm text-pink-200 sm:text-base">
             &copy; 2025 Dra. Ofara Pacheco. Todos los derechos reservados.
           </p>
         </div>

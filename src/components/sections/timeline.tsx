@@ -96,11 +96,11 @@ function TimelineEvent({
       >
         <event.icon className="h-8 w-8 text-white" />
       </div>
-      <div className="mb-2 text-3xl font-bold text-rose-900">{event.year}</div>
-      <h3 className="mb-2 text-center text-xl font-semibold text-rose-800">
+      <div className="mb-2 text-3xl font-bold text-pink-900">{event.year}</div>
+      <h3 className="mb-2 text-center text-xl font-semibold text-pink-800">
         {event.title}
       </h3>
-      <p className="text-center text-rose-700">{event.description}</p>
+      <p className="text-center text-pink-700">{event.description}</p>
     </motion.div>
   );
 }
@@ -114,10 +114,10 @@ export function Timeline() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="mb-8 text-center text-3xl font-bold text-rose-900 sm:mb-12 sm:text-4xl">
+          <h2 className="mb-8 text-center text-3xl font-bold text-pink-900 sm:mb-12 sm:text-4xl">
             Trayectoria Profesional
           </h2>
-          <p className="mx-auto mb-12 max-w-3xl text-center text-lg text-rose-800">
+          <p className="mx-auto mb-12 max-w-3xl text-center text-lg text-pink-800">
             Explore el viaje profesional de la Dra. Ofara Pacheco, desde sus
             inicios académicos hasta su reconocimiento internacional en el campo
             de la periodoncia.

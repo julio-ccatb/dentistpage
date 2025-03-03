@@ -10,6 +10,7 @@ import {
   Droplets,
   Scissors,
   Sparkles,
+  TestTube,
   SmileIcon as Tooth,
 } from "lucide-react";
 import Link from "next/link";
@@ -34,20 +35,27 @@ const services = [
     description:
       "Mejoramos la apariencia de tu sonrisa con tratamientos personalizados como blanqueamiento, carillas y restauraciones estéticas.",
     icon: Sparkles,
-    color: "bg-rose-100 text-rose-600",
+    color: "bg-pink-100 text-pink-600",
   },
   {
     title: "Odontología General",
     description:
       "Ofrecemos servicios completos de odontología general para mantener tu salud bucal en óptimas condiciones.",
     icon: Tooth,
-    color: "bg-rose-100 text-rose-600",
+    color: "bg-pink-100 text-pink-600",
   },
   {
     title: "Ortodoncia",
     description:
       "Corregimos la posición de los dientes para lograr una sonrisa perfecta y una mordida saludable. Utilizamos técnicas modernas y aparatos discretos.",
     icon: Scissors,
+    color: "bg-purple-100 text-purple-600",
+  },
+  {
+    title: "Endodoncia",
+    description:
+      "Corregimos la posición de los dientes para lograr una sonrisa perfecta y una mordida saludable. Utilizamos técnicas modernas y aparatos discretos.",
+    icon: TestTube,
     color: "bg-purple-100 text-purple-600",
   },
   {
@@ -63,10 +71,10 @@ export function ServicesSection() {
   return (
     <AnimatedSection className="relative py-16 sm:py-20">
       <div id="servicios" className="container relative z-10 mx-auto px-4">
-        <h2 className="mb-4 text-center text-3xl font-light text-rose-900 sm:text-4xl">
+        <h2 className="mb-4 text-center text-3xl font-light text-pink-900 sm:text-4xl">
           Nuestros Servicios
         </h2>
-        <p className="mx-auto mb-8 max-w-3xl text-center text-lg text-rose-800 sm:mb-12 sm:text-xl">
+        <p className="mx-auto mb-8 max-w-3xl text-center text-lg text-pink-800 sm:mb-12 sm:text-xl">
           Ofrecemos una amplia gama de servicios dentales para cuidar de tu
           salud bucal y brindarte la mejor sonrisa posible.
         </p>
@@ -74,7 +82,7 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="rounded-xl bg-white p-6 shadow-lg sm:p-8"
+              className="rounded-xl bg-white p-6 shadow-lg last:col-start-2 sm:p-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -84,7 +92,7 @@ export function ServicesSection() {
               >
                 <service.icon className="h-6 w-6 sm:h-8 sm:w-8" />
               </div>
-              <h3 className="mb-3 text-lg font-medium text-rose-900 sm:text-xl">
+              <h3 className="mb-3 text-lg font-medium text-pink-900 sm:text-xl">
                 {service.title}
               </h3>
               <p className="mb-6 text-sm text-gray-600 sm:text-base">
@@ -94,7 +102,7 @@ export function ServicesSection() {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="mt-2 border-rose-300 text-sm text-rose-600 hover:bg-rose-50 hover:text-rose-900 sm:text-base"
+                  className="mt-2 border-pink-300 text-sm text-pink-600 hover:bg-pink-50 hover:text-pink-900 sm:text-base"
                 >
                   Saber más
                   <ArrowRight className="ml-2 h-4 w-4" />

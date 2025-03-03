@@ -11,7 +11,7 @@ export function AboutSection() {
   return (
     <section
       id="sobre-mi"
-      className="relative -mt-1 overflow-hidden bg-rose-50 py-16 sm:py-20"
+      className="relative -mt-1 overflow-hidden bg-pink-50 py-16 sm:py-20"
     >
       <div className="container relative z-10 mx-auto px-4">
         <div className="flex flex-col items-center justify-between gap-8 lg:flex-row lg:gap-12">
@@ -29,7 +29,7 @@ export function AboutSection() {
               className="mx-auto w-full max-w-[250px] !rounded-full shadow-2xl sm:max-w-[350px] md:max-w-[400px] lg:max-w-[500px]"
             />
             <div className="absolute -bottom-4 -right-4 rounded-full bg-white p-3 shadow-lg sm:p-4">
-              <Tooth className="h-6 w-6 text-rose-600 sm:h-8 sm:w-8" />
+              <Tooth className="h-6 w-6 text-pink-600 sm:h-8 sm:w-8" />
             </div>
           </motion.div>
           <motion.div
@@ -38,13 +38,13 @@ export function AboutSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            <h2 className="mb-4 text-3xl font-bold leading-tight text-rose-900 sm:mb-6 sm:text-4xl md:text-5xl">
+            <h2 className="mb-4 text-3xl font-bold leading-tight text-pink-900 sm:mb-6 sm:text-4xl md:text-5xl">
               Dra. Ofara Pacheco
-              <span className="block text-rose-600">
-                Odontóloga-Periodoncista
+              <span className="block text-pink-600">
+                Periodoncista-Implantologa
               </span>
             </h2>
-            <p className="mb-6 text-base text-rose-800 sm:mb-8 sm:text-lg md:text-xl">
+            <p className="mb-6 text-base text-pink-800 sm:mb-8 sm:text-lg md:text-xl">
               Soy odontóloga especializada en periodoncia e implantes, con 9
               años de experiencia ayudando a mis pacientes a recuperar su salud
               bucal y confianza. Me apasiona la odontología y estoy comprometida
@@ -56,7 +56,7 @@ export function AboutSection() {
               <Link target="_blank" href={globalVariable.whatsappLink}>
                 <Button
                   size="lg"
-                  className="w-full bg-rose-600 text-base text-white shadow-lg hover:bg-rose-700 sm:w-auto sm:text-lg"
+                  className="w-full bg-pink-600 text-base text-white shadow-lg hover:bg-pink-700 sm:w-auto sm:text-lg"
                 >
                   <Calendar className="mr-2 h-5 w-5" />
                   Agenda una consulta
@@ -66,7 +66,7 @@ export function AboutSection() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="w-full border-rose-300 text-base text-rose-600 hover:bg-rose-50 hover:text-rose-900 sm:w-auto sm:text-lg"
+                  className="w-full border-pink-300 text-base text-pink-600 hover:bg-pink-50 hover:text-pink-900 sm:w-auto sm:text-lg"
                 >
                   Conoce más sobre mí
                   <ArrowRight className="ml-2 h-5 w-5" />

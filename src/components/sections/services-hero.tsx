@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function ServicesHero() {
   return (
-    <section className="bg-gradient-to-r from-rose-600 to-rose-800 pb-16 pt-32 text-white">
+    <section className="bg-gradient-to-r from-pink-600 to-pink-800 pb-16 pt-32 text-white">
       {" "}
       {/* Reduced pb-16 for bottom padding */}
       <div className="container mx-auto px-4">
@@ -27,7 +27,7 @@ export default function ServicesHero() {
           >
             <a
               href="#tratamientos"
-              className="rounded-full bg-white px-8 py-3 font-semibold text-rose-600 transition duration-300 hover:bg-rose-100"
+              className="rounded-full bg-white px-8 py-3 font-semibold text-pink-600 transition duration-300 hover:bg-pink-100"
             >
               Explorar Tratamientos
             </a>

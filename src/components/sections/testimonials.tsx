@@ -62,7 +62,7 @@ export function Testimonials() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="mb-8 text-center text-3xl font-bold text-rose-900 sm:mb-12 sm:text-4xl">
+          <h2 className="mb-8 text-center text-3xl font-bold text-pink-900 sm:mb-12 sm:text-4xl">
             Lo que dicen nuestros pacientes
           </h2>
         </motion.div>
@@ -86,7 +86,7 @@ export function Testimonials() {
                 className="mr-4 rounded-full"
               />
               <div>
-                <h3 className="text-xl font-semibold text-rose-900">
+                <h3 className="text-xl font-semibold text-pink-900">
                   {testimonials[currentTestimonial]!.name}
                 </h3>
                 <div className="flex text-yellow-400">
@@ -98,21 +98,21 @@ export function Testimonials() {
                 </div>
               </div>
             </div>
-            <p className="mb-4 text-lg italic text-rose-800">
+            <p className="mb-4 text-lg italic text-pink-800">
               &quot;{testimonials[currentTestimonial]!.text}&quot;
             </p>
           </motion.div>
           <div className="mt-8 flex justify-center space-x-4">
             <button
               onClick={prevTestimonial}
-              className="rounded-full bg-rose-100 p-2 text-rose-600 transition-colors hover:bg-rose-200"
+              className="rounded-full bg-pink-100 p-2 text-pink-600 transition-colors hover:bg-pink-200"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="h-6 w-6" />
             </button>
             <button
               onClick={nextTestimonial}
-              className="rounded-full bg-rose-100 p-2 text-rose-600 transition-colors hover:bg-rose-200"
+              className="rounded-full bg-pink-100 p-2 text-pink-600 transition-colors hover:bg-pink-200"
               aria-label="Next testimonial"
             >
               <ChevronRight className="h-6 w-6" />

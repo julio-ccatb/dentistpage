@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 
 export function AboutHero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-rose-50 to-indigo-100 pb-16 pt-24 sm:pb-20 sm:pt-32">
+    <section className="relative overflow-hidden bg-gradient-to-br from-pink-50 to-indigo-100 pb-16 pt-24 sm:pb-20 sm:pt-32">
       <div className="container relative z-10 mx-auto px-4">
         <div className="flex flex-col items-center justify-between gap-8 lg:flex-row lg:gap-12">
           <motion.div
@@ -16,17 +16,17 @@ export function AboutHero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="mb-4 text-4xl font-bold leading-tight text-rose-900 sm:mb-6 sm:text-5xl md:text-6xl">
+            <h1 className="mb-4 text-4xl font-bold leading-tight text-pink-900 sm:mb-6 sm:text-5xl md:text-6xl">
               Transformando Sonrisas,
               <br />
-              <span className="text-rose-600">Cambiando Vidas</span>
+              <span className="text-pink-600">Cambiando Vidas</span>
             </h1>
-            <p className="mb-6 text-lg text-rose-800 sm:mb-8 sm:text-xl">
+            <p className="mb-6 text-lg text-pink-800 sm:mb-8 sm:text-xl">
               Conozca a la Dra. Ofara Pacheco, una especialista en Odontología y
               Periodoncia con más de 9 años de experiencia, dedicada a brindar
               atención dental de excelencia y crear sonrisas radiantes.
             </p>
-            <Button className="bg-rose-600 text-base text-white hover:bg-rose-700 sm:text-lg">
+            <Button className="bg-pink-600 text-base text-white hover:bg-pink-700 sm:text-lg">
               Descubre Nuestra Historia
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -55,7 +55,7 @@ export function AboutHero() {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                className="h-8 w-8 text-rose-600 sm:h-10 sm:w-10"
+                className="h-8 w-8 text-pink-600 sm:h-10 sm:w-10"
               >
                 <path
                   strokeLinecap="round"
