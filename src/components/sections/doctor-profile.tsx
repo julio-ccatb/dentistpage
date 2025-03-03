@@ -16,16 +16,6 @@ const profileData = [
         description:
           "Especialista en el tratamiento de enfermedades de las encías y colocación de implantes dentales.",
       },
-      {
-        title: "Ortodoncia y Prótesis",
-        description:
-          "Corrección de alineación dental y rehabilitación con prótesis dentales.",
-      },
-      {
-        title: "Odontopediatría y Cirugía Maxilofacial",
-        description:
-          "Cuidado dental infantil y procedimientos quirúrgicos orales.",
-      },
     ],
   },
   {
@@ -85,11 +75,6 @@ const profileData = [
       {
         title: "Pertenencia a Asociaciones",
         description: "Miembro del Colegio Dominicano de Odontólogos.",
-      },
-      {
-        title: "Clínica Propia",
-        description:
-          "Dirección de su consultorio en Santo Domingo, con un equipo multidisciplinario.",
       },
     ],
   },
@@ -157,11 +142,12 @@ export function DoctorProfile() {
               Con más de una década de experiencia, la Dra. Ofara Pacheco se ha
               consolidado como una referente en implantología avanzada. Su
               enfoque innovador combina las últimas tecnologías en implantes
-              dentales con técnicas mínimamente invasivas, ofreciendo soluciones
-              personalizadas que transforman sonrisas y vidas. Especializada en
-              casos complejos de regeneración ósea e implantes de carga
-              inmediata, la Dra. Pacheco garantiza resultados excepcionales y
-              una experiencia de tratamiento superior.
+              dentales con técnicas mínimamente invasivas de cirugía plástica
+              periodontal, ofreciendo soluciones personalizadas que transforman
+              sonrisas y vidas. Especializada en casos complejos de regeneración
+              ósea e implantes de carga inmediata, la Dra. Pacheco garantiza
+              resultados excepcionales y una experiencia de tratamiento
+              superior.
             </motion.p>
             <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-2">
               {profileData.map((category) => (

@@ -77,7 +77,7 @@ export function Expertise() {
           {expertiseAreas.map((area, index) => (
             <motion.div
               key={index}
-              className="rounded-xl bg-white p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl"
+              className="rounded-xl bg-white p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl lg:last:col-start-2"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
