@@ -1,10 +1,32 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 "use client";
 
-import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import {
+  ArrowDownToLine,
+  Calendar,
+  CheckCircle,
+  Clock,
+  Crown,
+  Layers,
+  Maximize2,
+  Microscope,
+  Repeat,
+  ScissorsIcon as Scalpel,
+  Scissors,
+  Search,
+  Shield,
+  Sparkles,
+  Stethoscope,
+  Target,
+  SmileIcon as Tooth,
+  X,
+  Zap,
+} from "lucide-react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import { SmileIcon as Tooth, Microscope, Shield } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
+// Updated treatment groups with process information and new descriptions
 const treatmentGroups = [
   {
     id: "implantologia",
@@ -16,18 +38,34 @@ const treatmentGroups = [
         name: "Implantes Dentales",
         description:
           "Restauración completa mediante implantes de titanio biocompatibles, ofreciendo una solución permanente y natural para dientes perdidos.",
-        images: [
+        processImage: {
+          src: "/placeholder.svg?height=400&width=600",
+          alt: "Diagrama del proceso de implantes dentales",
+        },
+        process: [
           {
-            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZRPsZdMEAHJwfPNGXOtV06ovKB9Y1e74LmMCT",
-            alt: "Implante dental individual",
+            title: "Diagnóstico y planificación",
+            description:
+              "Evaluación completa mediante radiografías 3D y escáneres digitales para crear un plan de tratamiento personalizado.",
+            icon: Search,
           },
           {
-            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZ26aLbXuLx6PJWCqFOMbwAVDuHcS978GYERpn",
-            alt: "Proceso de colocación de implante",
+            title: "Colocación del implante",
+            description:
+              "Procedimiento quirúrgico mínimamente invasivo para insertar el implante de titanio en el hueso maxilar.",
+            icon: ArrowDownToLine,
           },
           {
-            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZMYjg8zPGjN0J6qnVOxA43FKwmt5fvcuoshXQ",
-            alt: "Resultado final de implantes",
+            title: "Período de osteointegración",
+            description:
+              "Fase de cicatrización de 3-6 meses donde el implante se fusiona con el hueso, creando una base sólida.",
+            icon: Clock,
+          },
+          {
+            title: "Colocación de la corona",
+            description:
+              "Diseño y fijación de una corona personalizada sobre el implante, restaurando la función y estética dental.",
+            icon: Crown,
           },
         ],
       },
@@ -42,19 +80,35 @@ const treatmentGroups = [
         id: "frenectomia",
         name: "Frenectomía",
         description:
-          "Procedimiento quirúrgico para corregir el frenillo labial o lingual, mejorando la función y estética bucal.",
-        images: [
+          "La frenectomía es un procedimiento sencillo en el que se elimina o modifica un frenillo bucal (labial o lingual) cuando causa problemas en la movilidad de la lengua, el habla, la alineación de los dientes o el uso de prótesis. Se realiza de forma rápida y con mínima molestia, mejorando la función y la salud bucal.",
+        processImage: {
+          src: "/placeholder.svg?height=400&width=600",
+          alt: "Diagrama del proceso de frenectomía",
+        },
+        process: [
           {
-            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZ8wx0cUsGtLX3yWRPe2k7hmBgAwMF6r58U4Sq",
-            alt: "Procedimiento de frenectomía",
+            title: "Evaluación inicial",
+            description:
+              "Examen detallado para determinar la necesidad de la frenectomía y planificar el procedimiento.",
+            icon: Search,
           },
           {
-            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZcLh3gokPAREVgCtQlZsJbFWLOd80aSGTp6vc",
-            alt: "Antes y después de frenectomía",
+            title: "Procedimiento quirúrgico",
+            description:
+              "Técnica mínimamente invasiva para liberar el frenillo, utilizando anestesia local para mayor comodidad.",
+            icon: Scissors,
           },
           {
-            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZrTbOy1I4a95z3DBkW1yVEZwJlAXgIoFxncfj",
-            alt: "Resultados de frenectomía",
+            title: "Recuperación inmediata",
+            description:
+              "Instrucciones post-operatorias para minimizar molestias y promover una cicatrización óptima.",
+            icon: CheckCircle,
+          },
+          {
+            title: "Seguimiento y resultados",
+            description:
+              "Evaluación de la cicatrización y mejora en la movilidad labial o lingual según el caso.",
+            icon: Calendar,
           },
         ],
       },
@@ -63,18 +117,34 @@ const treatmentGroups = [
         name: "Gingivectomía",
         description:
           "Técnica quirúrgica para remodelar el contorno de las encías, eliminando el exceso de tejido gingival.",
-        images: [
+        processImage: {
+          src: "/placeholder.svg?height=400&width=600",
+          alt: "Diagrama del proceso de gingivectomía",
+        },
+        process: [
           {
-            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZuwOJ1yKYyRhZH5uvOxt6NQ1Sa0ejCWAPwMp7",
-            alt: "Procedimiento de gingivectomía",
+            title: "Diagnóstico estético",
+            description:
+              "Evaluación del contorno gingival y planificación del procedimiento para lograr una sonrisa armónica.",
+            icon: Search,
           },
           {
-            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZlXHBtJuCW7KiXoF0STwvz8AGeI519MJQrEdf",
-            alt: "Antes y después de gingivectomía",
+            title: "Marcado y medición",
+            description:
+              "Delimitación precisa del tejido a remodelar para garantizar resultados estéticos óptimos.",
+            icon: Target,
           },
           {
-            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZk4Y6j9Drn63yQHEetX5BwpaIVsWK9rvRgMSc",
-            alt: "Resultados de gingivectomía",
+            title: "Remodelado gingival",
+            description:
+              "Eliminación del exceso de tejido utilizando láser o bisturí, según las necesidades del caso.",
+            icon: Scalpel,
+          },
+          {
+            title: "Cicatrización y resultados",
+            description:
+              "Período de recuperación breve con resultados visibles inmediatos y mejora progresiva.",
+            icon: Sparkles,
           },
         ],
       },
@@ -82,15 +152,71 @@ const treatmentGroups = [
         id: "peeling-gingival",
         name: "Peeling Gingival",
         description:
-          "Tratamiento para mejorar la salud y apariencia de las encías, eliminando tejido dañado y promoviendo la regeneración.",
-        images: [
+          "El peeling gingival es un tratamiento estético que elimina las manchas oscuras en las encías causadas por la acumulación de melanina. Se realiza con láser o mediante técnicas mínimamente invasivas, devolviendo a las encías un color más rosado y uniforme para una sonrisa más estética y saludable.",
+        processImage: {
+          src: "/placeholder.svg?height=400&width=600",
+          alt: "Diagrama del proceso de peeling gingival",
+        },
+        process: [
           {
-            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZj9XQtEWHKlDdosVLzfEJrCXFP9GveS8R1M7x",
-            alt: "Proceso de peeling gingival",
+            title: "Evaluación de la pigmentación",
+            description:
+              "Análisis de la coloración gingival y determinación del tratamiento más adecuado.",
+            icon: Search,
           },
           {
-            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZhoodhD613u9y4X012ElMxIWF6vOoTqP7Kcnf",
-            alt: "Antes y después de peeling gingival",
+            title: "Aplicación del peeling",
+            description:
+              "Uso de agentes específicos o tecnología láser para eliminar la capa superficial pigmentada.",
+            icon: Layers,
+          },
+          {
+            title: "Regeneración tisular",
+            description:
+              "Proceso natural de renovación del tejido gingival, resultando en un color más uniforme.",
+            icon: Repeat,
+          },
+          {
+            title: "Mantenimiento del resultado",
+            description:
+              "Recomendaciones para preservar el color natural de las encías a largo plazo.",
+            icon: CheckCircle,
+          },
+        ],
+      },
+      {
+        id: "cobertura-radicular",
+        name: "Cobertura Radicular",
+        description:
+          "La cobertura radicular es un procedimiento periodontal que corrige la recesión de encías, cubriendo la raíz expuesta del diente con tejido gingival. Esto no solo mejora la estética de la sonrisa, sino que también protege la raíz de la sensibilidad y posibles daños, ayudando a mantener una encía sana y funcional.",
+        processImage: {
+          src: "/placeholder.svg?height=400&width=600",
+          alt: "Diagrama del proceso de cobertura radicular",
+        },
+        process: [
+          {
+            title: "Diagnóstico de recesión",
+            description:
+              "Evaluación del grado de recesión gingival y planificación del tratamiento adecuado.",
+            icon: Search,
+          },
+          {
+            title: "Preparación del sitio",
+            description:
+              "Acondicionamiento de la superficie radicular para favorecer la adhesión del injerto.",
+            icon: Scalpel,
+          },
+          {
+            title: "Injerto de tejido",
+            description:
+              "Colocación de tejido conectivo o gingival para cubrir la raíz expuesta.",
+            icon: Layers,
+          },
+          {
+            title: "Cicatrización y resultados",
+            description:
+              "Período de recuperación con instrucciones específicas para garantizar el éxito del procedimiento.",
+            icon: CheckCircle,
           },
         ],
       },
@@ -103,21 +229,37 @@ const treatmentGroups = [
     treatments: [
       {
         id: "profilaxis",
-        name: "Profilaxis",
+        name: "Profilaxis Dental",
         description:
-          "Limpieza dental profesional para prevenir enfermedades periodontales y mantener una óptima salud bucal.",
-        images: [
+          "La profilaxis dental es una limpieza profesional que elimina la placa bacteriana, el sarro y las manchas en los dientes. Ayuda a prevenir enfermedades como la gingivitis y la periodontitis, manteniendo las encías y los dientes sanos.",
+        processImage: {
+          src: "/placeholder.svg?height=400&width=600",
+          alt: "Diagrama del proceso de profilaxis dental",
+        },
+        process: [
           {
-            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZrWhQdFI4a95z3DBkW1yVEZwJlAXgIoFxncfj",
-            alt: "Procedimiento de profilaxis dental",
+            title: "Evaluación inicial",
+            description:
+              "Examen completo de la salud bucal para identificar áreas que requieren atención especial.",
+            icon: Stethoscope,
           },
           {
-            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZTS9ZVSjzaQAcb2GUWtr0kMs9V3DpfY6oPSuB",
-            alt: "Antes y después de profilaxis",
+            title: "Eliminación de placa y sarro",
+            description:
+              "Remoción profesional de depósitos duros y blandos de todas las superficies dentales.",
+            icon: Zap,
           },
           {
-            src: "https://unh6ilypz7.ufs.sh/f/LRNJWRv4WyTZx1L021wtSAslWR2wGXmOoYIy9fgrbP4vdeha",
-            alt: "Equipo de profilaxis dental",
+            title: "Pulido dental",
+            description:
+              "Suavizado de las superficies dentales para eliminar manchas y reducir la acumulación de placa.",
+            icon: Sparkles,
+          },
+          {
+            title: "Recomendaciones personalizadas",
+            description:
+              "Instrucciones específicas para el cuidado en casa y programación de próximas visitas preventivas.",
+            icon: Calendar,
           },
         ],
       },
@@ -130,12 +272,25 @@ export function TreatmentSelector() {
   const [selectedTreatment, setSelectedTreatment] = useState(
     treatmentGroups[0]?.treatments[0],
   );
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  // Set initial treatment when group changes
+  useEffect(() => {
+    if (selectedGroup && selectedGroup.treatments.length > 0) {
+      setSelectedTreatment(selectedGroup.treatments[0]);
+    }
+  }, [selectedGroup]);
+
+  // Close modal when clicking outside
+  const handleClickOutside = (e: React.MouseEvent) => {
+    if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
+      setIsModalOpen(false);
+    }
+  };
 
   return (
     <section id="tratamientos" className="bg-gray-50 py-16">
-      {" "}
-      {/* Removed mt-20, added id for anchor link */}
       <div className="container mx-auto px-4">
         <div className="mb-8">
           <h2 className="mb-6 text-3xl font-bold text-pink-900">
@@ -147,8 +302,6 @@ export function TreatmentSelector() {
                 key={group.id}
                 onClick={() => {
                   setSelectedGroup(group);
-                  setSelectedTreatment(group.treatments[0]);
-                  setCurrentImageIndex(0);
                 }}
                 className={`rounded-full px-4 py-2 transition-colors ${
                   selectedGroup?.id === group.id
@@ -175,7 +328,6 @@ export function TreatmentSelector() {
                   key={treatment.id}
                   onClick={() => {
                     setSelectedTreatment(treatment);
-                    setCurrentImageIndex(0);
                   }}
                   className={`w-full rounded-lg p-4 text-left transition-colors ${
                     selectedTreatment?.id === treatment.id
@@ -205,34 +357,114 @@ export function TreatmentSelector() {
                 <p className="mb-6 text-lg text-pink-800">
                   {selectedTreatment?.description}
                 </p>
-                <div className="relative mb-4 aspect-video">
-                  <Image
-                    src={
-                      selectedTreatment?.images[currentImageIndex]?.src ??
-                      "/placeholder.svg"
-                    }
-                    alt={
-                      selectedTreatment?.images[currentImageIndex]?.alt ?? ""
-                    }
-                    fill
-                    className="rounded-lg object-cover"
-                  />
-                </div>
-                <div className="flex justify-center gap-2">
-                  {selectedTreatment?.images.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentImageIndex(index)}
-                      className={`h-3 w-3 rounded-full ${currentImageIndex === index ? "bg-pink-600" : "bg-pink-200"}`}
-                      aria-label={`Ver imagen ${index + 1} de ${selectedTreatment.name}`}
-                    />
-                  ))}
+
+                <div className="rounded-lg bg-white p-6 shadow-md">
+                  <div className="mb-6 flex items-center justify-between">
+                    <h4 className="text-xl font-semibold text-pink-900">
+                      Proceso del Tratamiento
+                    </h4>
+
+                    {/* Small process diagram thumbnail */}
+                    <div
+                      className="relative h-16 w-24 cursor-pointer overflow-hidden rounded-md border-2 border-pink-200 transition-colors hover:border-pink-500"
+                      onClick={() => setIsModalOpen(true)}
+                      title="Ampliar diagrama"
+                    >
+                      <Image
+                        src={
+                          selectedTreatment?.processImage?.src ??
+                          "/placeholder.svg"
+                        }
+                        alt={
+                          selectedTreatment?.processImage?.alt ??
+                          "Diagrama del proceso"
+                        }
+                        fill
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 transition-opacity hover:bg-opacity-40">
+                        <Maximize2 className="h-5 w-5 text-white" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    {selectedTreatment?.process?.map((step, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.3, delay: index * 0.1 }}
+                        className="flex gap-4"
+                      >
+                        <div className="flex-shrink-0">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-pink-100">
+                            <step.icon className="h-6 w-6 text-pink-600" />
+                          </div>
+                          {index <
+                            (selectedTreatment?.process?.length || 0) - 1 && (
+                            <div className="mx-auto my-2 h-16 w-0.5 bg-pink-200"></div>
+                          )}
+                        </div>
+                        <div>
+                          <h5 className="text-lg font-medium text-pink-900">
+                            {step.title}
+                          </h5>
+                          <p className="mt-1 text-pink-800">
+                            {step.description}
+                          </p>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             </AnimatePresence>
           </div>
         </div>
       </div>
+
+      {/* Modal for expanded process image */}
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 p-4"
+            onClick={handleClickOutside}
+          >
+            <motion.div
+              ref={modalRef}
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
+              className="relative max-h-[90vh] max-w-[90vw] overflow-hidden rounded-lg bg-white p-2"
+            >
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="absolute right-2 top-2 z-10 rounded-full bg-pink-600 p-1 text-white"
+                aria-label="Cerrar modal"
+              >
+                <X className="h-6 w-6" />
+              </button>
+              <div className="relative h-[80vh] w-[80vw]">
+                <Image
+                  src={
+                    selectedTreatment?.processImage?.src ?? "/placeholder.svg"
+                  }
+                  alt={
+                    selectedTreatment?.processImage?.alt ??
+                    "Diagrama del proceso"
+                  }
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
