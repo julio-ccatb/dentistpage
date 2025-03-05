@@ -184,6 +184,42 @@ const treatmentGroups = [
           },
         ],
       },
+      {
+        id: "cobertura-radicular",
+        name: "Cobertura Radicular",
+        description:
+          "La cobertura radicular es un procedimiento periodontal que corrige la recesión de encías, cubriendo la raíz expuesta del diente con tejido gingival. Esto no solo mejora la estética de la sonrisa, sino que también protege la raíz de la sensibilidad y posibles daños, ayudando a mantener una encía sana y funcional.",
+        processImage: {
+          src: "/placeholder.svg?height=400&width=600",
+          alt: "Diagrama del proceso de cobertura radicular",
+        },
+        process: [
+          {
+            title: "Diagnóstico de recesión",
+            description:
+              "Evaluación del grado de recesión gingival y planificación del tratamiento adecuado.",
+            icon: Search,
+          },
+          {
+            title: "Preparación del sitio",
+            description:
+              "Acondicionamiento de la superficie radicular para favorecer la adhesión del injerto.",
+            icon: Scalpel,
+          },
+          {
+            title: "Injerto de tejido",
+            description:
+              "Colocación de tejido conectivo o gingival para cubrir la raíz expuesta.",
+            icon: Layers,
+          },
+          {
+            title: "Cicatrización y resultados",
+            description:
+              "Período de recuperación con instrucciones específicas para garantizar el éxito del procedimiento.",
+            icon: CheckCircle,
+          },
+        ],
+      },
     ],
   },
   {
