@@ -8,9 +8,14 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Clock, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import { type SubmitHandler, useForm } from "react-hook-form";
+import { toast } from "sonner";
 
 export function ContactSection() {
-  const { mutate } = api.mailer.create.useMutation();
+  const { mutate } = api.mailer.create.useMutation({
+    onMutate: () => toast.info("Enviando mensaje..."),
+    onSuccess: () => toast.success("Mensaje enviado correctamente"),
+    onError: () => toast.error("Ocurrió un error al enviar el mensaje"),
+  });
 
   const {
     register,
