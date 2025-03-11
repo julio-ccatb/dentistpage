@@ -82,7 +82,7 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="rounded-xl bg-white p-6 shadow-lg last:col-start-2 sm:p-8"
+              className="rounded-xl bg-white p-6 shadow-lg sm:p-8 sm:last:col-start-2"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
