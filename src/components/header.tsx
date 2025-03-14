@@ -35,7 +35,7 @@ export function Header() {
             />
             <Image
               quality={100}
-              src={"/Logotipo_Rojo Claro.png"}
+              src={"/Logotipo_Rojo Pink.svg"}
               alt="Clínica Dental Dra. Ofara Pacheco"
               objectFit="contain"
               height={150}
