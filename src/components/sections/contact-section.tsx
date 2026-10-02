@@ -2,10 +2,11 @@
 
 import { AnimatedSection } from "@/components/animated-section";
 import { Button } from "@/components/ui/button";
+import { globalVariable } from "@/globals/config";
 import contactSchema, { type Contact } from "@/globals/types";
 import { api } from "@/trpc/react";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Clock, MapPin, Phone } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import { type SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -114,23 +115,31 @@ export function ContactSection() {
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-pink-600" />
                 <Link
-                  href="tel:+18292909120"
-                  className="text-base text-gray-700 sm:text-lg"
+                  href={globalVariable.phoneLink}
+                  className="text-base text-gray-700 hover:text-pink-600 sm:text-lg"
                 >
-                  +1 (829) 290-9120
+                  {globalVariable.phone}
+                </Link>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="h-5 w-5 text-pink-600" />
+                <Link
+                  href={globalVariable.emailLink}
+                  className="text-base text-gray-700 hover:text-pink-600 sm:text-lg"
+                >
+                  {globalVariable.email}
                 </Link>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-pink-600" />
                 <span className="text-base text-gray-700 sm:text-lg">
-                  C. Espiral #4, esquina calle 13, Santo Domingo. Padilla
-                  clínica dental.
+                  {globalVariable.address}
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="h-5 w-5 text-pink-600" />
                 <span className="text-base text-gray-700 sm:text-lg">
-                  Lun-Vie: 9:00-20:00
+                  {globalVariable.schedule.weekdays}
                 </span>
               </div>
             </div>
@@ -138,7 +147,7 @@ export function ContactSection() {
           <div className="space-y-6 sm:space-y-8">
             <div className="aspect-w-16 aspect-h-9">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.181201214053!2d-69.95094122480944!3d18.47544968260935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf8987c442beb9%3A0x308a4a0d8aaee248!2sPadilla%20Cl%C3%ADnica%20Dental!5e0!3m2!1ses-419!2sdo!4v1740400432063!5m2!1ses-419!2sdo"
+                src={globalVariable.mapEmbedUrl}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -155,18 +164,20 @@ export function ContactSection() {
                 <li className="flex justify-between text-base sm:text-lg">
                   <span className="text-gray-700">Lunes - Viernes</span>
                   <span className="font-medium text-pink-700">
-                    9:00 - 20:00
+                    {globalVariable.schedule.weekdaysHours}
                   </span>
                 </li>
                 <li className="flex justify-between text-base sm:text-lg">
                   <span className="text-gray-700">Sábado</span>
                   <span className="font-medium text-pink-700">
-                    10:00 - 15:00
+                    {globalVariable.schedule.saturday}
                   </span>
                 </li>
                 <li className="flex justify-between text-base sm:text-lg">
                   <span className="text-gray-700">Domingo</span>
-                  <span className="font-medium text-pink-700">Cerrado</span>
+                  <span className="font-medium text-pink-700">
+                    {globalVariable.schedule.sunday}
+                  </span>
                 </li>
               </ul>
             </div>

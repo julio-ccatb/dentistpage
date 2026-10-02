@@ -1,6 +1,6 @@
 "use client";
 
-import { Clock, MapPin, Phone } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 
 import {
   SiFacebook,
@@ -10,6 +10,7 @@ import {
 } from "@icons-pack/react-simple-icons";
 import Image from "next/image";
 import Link from "next/link";
+import { globalVariable } from "@/globals/config";
 
 export function FooterSection() {
   return (
@@ -28,28 +29,28 @@ export function FooterSection() {
                 />
                 <div className="flex space-x-4">
                   <Link
-                    href={"mailto:info@drapacheco.com"}
+                    href={globalVariable.emailLink}
                     target="_blank"
                     className="text-pink-300 hover:text-pink-100"
                   >
                     <SiGmail className="h-5 w-5" />
                   </Link>
                   <Link
-                    href="http://instagram.com/_u/dra.ofarapacheco/"
+                    href={globalVariable.instagram}
                     target="_blank"
                     className="text-pink-300 hover:text-pink-100"
                   >
                     <SiInstagram className="h-5 w-5" />
                   </Link>
                   <Link
-                    href="https://www.facebook.com/ofara.pacheco"
+                    href={globalVariable.facebook}
                     target="_blank"
                     className="text-pink-300 hover:text-pink-100"
                   >
                     <SiFacebook className="h-5 w-5" />
                   </Link>
                   <Link
-                    href="https://www.tiktok.com/@ofarap"
+                    href={globalVariable.tiktok}
                     target="_blank"
                     className="text-pink-300 hover:text-pink-100"
                   >
@@ -146,23 +147,32 @@ export function FooterSection() {
                 <Phone className="mr-2 h-5 w-5 text-pink-300" />
 
                 <Link
-                  href={"tel:+18292909120"}
-                  className="text-sm text-pink-200 sm:text-base"
+                  href={globalVariable.phoneLink}
+                  className="text-sm text-pink-200 hover:text-white sm:text-base"
                 >
-                  +1 (829) 290-9120
+                  {globalVariable.phone}
+                </Link>
+              </li>
+              <li className="flex items-center">
+                <Mail className="mr-2 h-5 w-5 text-pink-300" />
+
+                <Link
+                  href={globalVariable.emailLink}
+                  className="text-sm text-pink-200 hover:text-white sm:text-base"
+                >
+                  {globalVariable.email}
                 </Link>
               </li>
               <li className="flex items-center">
                 <MapPin className="mr-2 h-5 w-7 text-pink-300" />
                 <span className="text-sm text-pink-200 sm:text-base">
-                  C. Espiral #4, esquina calle 13, Santo Domingo. Padilla
-                  clínica dental.
+                  {globalVariable.address}
                 </span>
               </li>
               <li className="flex items-center">
                 <Clock className="mr-2 h-5 w-5 text-pink-300" />
                 <span className="text-sm text-pink-200 sm:text-base">
-                  Lun-Vie: 9:00-20:00
+                  {globalVariable.schedule.weekdays}
                 </span>
               </li>
             </ul>

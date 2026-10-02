@@ -16,11 +16,11 @@ export const metadata: Metadata = {
     title: "Servicios de Implantología y Periodoncia | Dra. Ofara Pacheco",
     description:
       "Explore nuestros servicios especializados en implantología avanzada y periodoncia. Soluciones personalizadas para su salud bucal.",
-    url: "https://www.draofara.com/services",
+    url: "https://www.drapacheco.com/services",
     siteName: "Clínica Dental Dra. Ofara Pacheco",
     images: [
       {
-        url: "https://www.draofara.com/services-og-image.jpg",
+        url: "https://www.drapacheco.com/services-og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Servicios de implantología y periodoncia avanzada",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: "Servicios de Implantología y Periodoncia | Dra. Ofara Pacheco",
     description:
       "Explore nuestros servicios especializados en implantología avanzada y periodoncia. Soluciones personalizadas para su salud bucal.",
-    images: ["https://www.draofara.com/services-twitter-image.jpg"],
+    images: ["https://www.drapacheco.com/services-twitter-image.jpg"],
   },
 };
 
