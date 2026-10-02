@@ -11,12 +11,15 @@ export const env = createEnv({
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
-    SMTP_HOST: z.string(),
-    SMTP_PORT: z.string().min(1, "SMTP_PORT is required").transform(Number),
-    SMTP_USER: z.string(),
-    CLIENT_ID: z.string(),
-    CLIENT_SECRET: z.string(),
-    CLIENT_REFRESH_TOKEN: z.string(),
+    SMTP_HOST: z.string().optional(),
+    SMTP_PORT: z
+      .string()
+      .transform((val) => (val ? Number(val) : undefined))
+      .optional(),
+    SMTP_USER: z.string().optional(),
+    CLIENT_ID: z.string().optional(),
+    CLIENT_SECRET: z.string().optional(),
+    CLIENT_REFRESH_TOKEN: z.string().optional(),
   },
 
   /**
